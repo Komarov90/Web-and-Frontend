@@ -1,5 +1,4 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap&subset=cyrillic-ext");
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
 * {
   padding: 0;
   margin: 0;
@@ -72,57 +71,91 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-@font-face {
-  font-family: "PFDinTextCondPro";
-  src: url("../fonts/pfdintextcondpro-regular.eot");
-  src: local("☺"), url("../fonts/pfdintextcondpro-regular.woff") format("woff"), url("../fonts/pfdintextcondpro-regular.ttf") format("truetype"), url("../fonts/pfdintextcondpro-regular.svg") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: "PFDinTextCondPro";
-  src: url("../fonts/pfdintextcondpro-medium.eot");
-  src: local("☺"), url("../fonts/pfdintextcondpro-medium.woff") format("woff"), url("../fonts/pfdintextcondpro-medium.ttf") format("truetype"), url("../fonts/pfdintextcondpro-medium.svg") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-.textoriginal {
-  margin: 0px 0px 30px 0px;
-  font-size: 30px;
-  line-height: 35px;
-}
-.textoriginal p {
-  margin: 0px 0px 30px 0px;
+body {
+  font-family: Lato;
 }
 
-.text {
-  font-family: "PT Sans";
-  font-size: 30px;
-  line-height: 35px;
+.about__body {
+  max-width: 823px;
+  margin: 0px auto;
+}
+.about__header {
+  margin: 0px 0px 65px 0px;
+}
+.about__title {
   margin: 0px 0px 30px 0px;
 }
-.text p {
-  margin: 0px 0px 30px 0px;
+.about__text {
+  max-width: 688px;
+  color: #868585;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 25.89px;
+  margin: 0px auto;
+}
+.about__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  margin: 0px -15px;
+}
+.about__column {
+  padding: 0px 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
 }
 
-.text-PFDin {
-  font-family: "PFDinTextCondPro";
-  font-size: 30px;
-  line-height: 35px;
-  margin: 0px 0px 30px 0px;
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 8.95px;
+  position: relative;
+  text-align: center;
+  padding: 0px 0px 30px 0px;
 }
-.text-PFDin p {
-  margin: 0px 0px 30px 0px;
+.title:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+  height: 1px;
+  left: 50%;
+  background-color: #000;
+  margin: 0px 0px 0px -25px;
 }
 
-.text-PFDinMedium {
-  font-family: "PFDinTextCondPro";
-  font-weight: 500;
-  font-size: 30px;
-  font-style: italic;
-  line-height: 35px;
-  margin: 0px 0px 30px 0px;
+.item-about__icon {
+  margin: 0px auto 40px auto;
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+  border: 2px solid #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.text-PFDinMedium p {
-  margin: 0px 0px 30px 0px;
+.item-about__title {
+  text-align: center;
+  color: #000000;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 3.52px;
+  margin: 0px 0px 35px 0px;
+}
+.item-about__text {
+  text-align: center;
+  color: #868585;
+  line-height: 26px;
+  font-weight: 300;
+  font-size: 14px;
 }

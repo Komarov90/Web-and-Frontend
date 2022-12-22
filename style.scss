@@ -14,49 +14,87 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap&subset=cyrillic-ext');
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
 
-@font-face {
-	font-family: 'PFDinTextCondPro';
-	src: url('../fonts/pfdintextcondpro-regular.eot');
-	src: local('☺'), url('../fonts/pfdintextcondpro-regular.woff') format('woff'), url('../fonts/pfdintextcondpro-regular.ttf') format('truetype'), url('../fonts/pfdintextcondpro-regular.svg') format('svg');
-	font-weight: normal;
-	font-style: italic;
-}
-@font-face {
-	font-family: 'PFDinTextCondPro';
-	src: url('../fonts/pfdintextcondpro-medium.eot');
-	src: local('☺'), url('../fonts/pfdintextcondpro-medium.woff') format('woff'), url('../fonts/pfdintextcondpro-medium.ttf') format('truetype'), url('../fonts/pfdintextcondpro-medium.svg') format('svg');
-	font-weight: 500;
-	font-style: normal;
+body{
+	font-family: Lato;
 }
 
-.textoriginal{
-	margin: 0px 0px 30px 0px;
-	font-size: 30px;
-	line-height: 35px;
-	p{margin: 0px 0px 30px 0px;}
+.about {
+	&__body {
+		max-width: 823px;
+		margin: 0px auto;
+	}
+	&__header {
+		margin: 0px 0px 65px 0px;
+	}
+	&__title {
+		margin: 0px 0px 30px 0px;
+	}
+	&__text {
+		max-width: 688px;
+		color: #868585;
+		font-size: 14px;
+		font-weight: 300;
+		text-align: center;
+		line-height: 25.89px;
+		margin: 0px auto;
+	}
+	&__row {
+		display: flex;
+		font-size: 0;
+		margin: 0px -15px;
+	}
+	&__column {
+		padding: 0px 15px;
+		flex: 0 0 33.333%;
+	}
 }
-.text{
-	font-family: "PT Sans";
-	font-size: 30px;
-	line-height: 35px;
-	margin: 0px 0px 30px 0px;
-	p{margin: 0px 0px 30px 0px;}
+.title {
+	font-size: 34px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 8.95px;
+	position: relative;
+	text-align: center;
+	padding: 0px 0px 30px 0px;
+	&:after{
+		content:'';
+		position: absolute;
+		width: 50px;
+		bottom: 0;
+		height: 1px;
+		left: 50%;
+		background-color: #000;
+		margin: 0px 0px 0px -25px;
+	}
 }
-.text-PFDin {
-	font-family: 'PFDinTextCondPro';
-	font-size: 30px;
-	line-height: 35px;
-	margin: 0px 0px 30px 0px;
-	p{margin: 0px 0px 30px 0px;}
+.item-about {
+	&__icon {
+		margin: 0px auto 40px auto;
+		border-radius: 50%;
+		width: 92px;
+		height: 92px;
+		border: 2px solid #f1f1f1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__title {
+		text-align: center;
+		color: #000000;
+		font-size: 22px;
+		text-transform: uppercase;
+		letter-spacing: 3.52px;
+		margin: 0px 0px 35px 0px;
+	}
+	&__text {
+		text-align: center;
+		color: #868585;
+		line-height: 26px;
+		font-weight: 300;
+		font-size: 14px;
+	}
 }
-.text-PFDinMedium {
-	font-family: 'PFDinTextCondPro';
-	font-weight: 500;
-	font-size: 30px;
-	font-style: italic;
-	line-height: 35px;
-	margin: 0px 0px 30px 0px;
-	p{margin: 0px 0px 30px 0px;}
-}
+
+
