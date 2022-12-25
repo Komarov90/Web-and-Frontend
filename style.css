@@ -85,13 +85,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .block__column {
   border: 20px solid #5e5373;
+  /*
+  flex-basis:auto;
+  flex-grow:0;
+  flex-shrink:1;
+  */
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .block__item {
   background-color: #15b5a4;
   padding: 50px;
   font-size: 50px;
-  font-size: 55px;
   color: #fff;
   font-weight: 700;
 }

@@ -17,6 +17,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
 
 
+
 .wrapper{
 	height:100%;
 	overflow:hiddin;
@@ -26,18 +27,36 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .block{
 
 }
+
 .block__row{
 	border:20px solid #ece89d;
 	margin: 0px 0px 20px 0px;
 }
+
 .block__column{
 	border:20px solid #5e5373;
+	/*
+	flex-basis:auto;
+	flex-grow:0;
+	flex-shrink:1;
+	*/
+	flex: 0 1 auto;
 }
+
+.block__column_1{
+
+}
+.block__column_2{
+
+}
+.block__column_3{
+
+}
+
 .block__item{
 	background-color: #15b5a4;
 	padding: 50px;
 	font-size: 50px;
-	font-size: 55px;
 	color: #fff;
 	font-weight: 700;
 }
