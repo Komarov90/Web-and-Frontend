@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>2D/3D Трансформации. CSS свойство transform</title>
+		<title>Padding и Margin</title>
 		<link rel="stylesheet" href="css/style.css">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
@@ -10,123 +10,305 @@
 	<body>
 		<div class="wrapper">
 			<div class="content">
-				<h1>CSS Transform</h1>
-				<div class="content__2D">
-					<section class="content__block">
-						<h2>translate (x, y)</h2>
-						<div class="content__translate">translate</div>
-						<p><strong>translate</strong> - сдвигает элемент на новое место, перемещая относительно изначального положения объекта вправо и вниз, используя координаты X и Y. Записывается следующим образом translate (x,y);</p>
-					</section>
-					<section class="content__block">
-						<h2>scale (x, y)</h2>
-						<div class="content__scale">
-							scale
+				<h1>Отступы Padding и Margin</h1>
+				<section class="section">
+					<h2>Общая информация</h2>
+					<p>Padding - внутренний отступ в объекте, от границ до содержимого. <br> Margin - внешний отступ от объекта, от границ до окружающих объектов. <br> Применяются к блочным и блочно-строчным объектам</p>
+					<div class="section__block">
+						<h3>Блочные объекты</h3>
+						<div class="section__item section__item_color-1 section__item_info">
+							Объект №1 (div) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 						</div>
-						<p><strong>scale</strong> - масштабирует элементы, делая их больше или меньше. По умолчанию значения указаны как единица (1) - это реальный размер объекта. Первое значение масштабирует элемент по ширине, второе — по высоте. Отрицательные значения отображают элемент зеркально.</p>
-					</section>
-					<section class="content__block">
-						<h2>rotate (угол+deg)</h2>
-						<div class="content__rotate">
-							rotate
+						<div class="section__item section__item_color-2 section__item_info">
+							Объект №2 (div) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 						</div>
-						<p><strong>rotate</strong> - поворачивает элементы на заданное количество градусов, отрицательные значения поворачивают элемент против часовой стрелки, положительные — по часовой стрелке. Записываются значения как градус поворота и deg</p>
-					</section>
-					<section class="content__block">
-						<h2>skew (x-угол+deg, y-угол+deg)</h2>
-						<div class="content__skew">
-							skew
+						<div class="section__item section__item_color-3 section__item_info">
+							Объект №3 (div) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 						</div>
-						<p><strong>skew</strong> - деформирует (искажает) стороны объекта относительно координатных осей. Если указано одно значение, второе будет определено браузером автоматически. Записываются значения как градус поворота и deg</p>
-					</section>
-					<section class="content__block">
-						<h2>matrix (a, c, b, d, x, y)</h2>
-						<div class="content__matrix">
-							matrix
+					</div>
+					<div class="section__block">
+						<h3>Строчные объекты</h3>
+						<span class="section__item section__item_color-1 section__item_info">
+							Объект №1 (span) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
+						</span>
+						<span class="section__item section__item_color-2 section__item_info">
+							Объект №2 (span) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
+						</span>
+						<span class="section__item section__item_color-3 section__item_info">
+							Объект №3 (span) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
+						</span>
+					</div>
+					<div class="section__block">
+						<h3>Изображения</h3>
+						<img class="section__image" src="img/avatar.jpg" alt="Картинка">
+					</div>
+				</section>
+				<section class="section">
+					<h2>Отступы и размеры блока. Свойство box-sizing</h2>
+					<p>Отступы по разному могут влиять на общий размер блока в зависимости от значения свойства box-sizing:</p>
+					<div class="section__item section__item_color-3 section__item_size">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, quo eveniet? Soluta laudantium temporibus quod accusamus atque enim. Iure hic inventore distinctio aspernatur dolorum eaque possimus odit aliquid ex quam?
+					</div>
+				</section>
+				<section class="section">
+					<h2>Отступы и фон</h2>
+					<p>Если для объекта применяется фоновое изображение(я) и/или заливка цветом либо градиентом, то стоит выбирать метод применения отступов в зависимости от ситуации:</p>
+					<div class="section__block">
+						<h3>Заливка цветом</h3>
+						<div class="section__item section__item_color-2 section__item_background-color">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ut similique earum consectetur quasi totam beatae distinctio dolor nulla, eveniet harum. Debitis rerum facere ea iste nam qui doloribus placeat.
 						</div>
-						<p><strong>matrix(a, c, b, d, x, y)</strong> - позволяет объединить несколько функций 2D-трансформаций в одной. В качестве трансформации допустимы поворот, масштабирование, наклон (деформация) и изменение положения. Свойства указываются без единиц измерения.</p>
-					</section>
-					<section class="content__block">
-						<h2>Множественные 2D трансформации</h2>
-						<div class="content__multi">
-							translate <br> scale <br> rotate
+						<div class="section__item section__item_color-3 section__item_background-color">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ut similique earum consectetur quasi totam beatae distinctio dolor nulla, eveniet harum. Debitis rerum facere ea iste nam qui doloribus placeat.
 						</div>
-						<p>Так же, подобного можно добиться используя множественные трансформации. А именно записать несколько значений в одно свойство transform.</p>
-					</section>
-					<section class="content__block">
-						<h2>transform-origin</h2>
-						<div class="content__transform-origin">
-							transform origin
+					</div>
+					<div class="section__block">
+						<h3>Фоновое изображение</h3>
+						<div class="section__item section__item_background-image">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, et. Explicabo aliquid reiciendis atque, iste officiis distinctio dolores omnis vitae mollitia temporibus, perferendis nihil dolorem maxime, fugit tenetur a cumque?
 						</div>
-						<p><strong>transform-origin</strong> - позволяет сместить центр трансформации, относительно которого происходит изменение положения/размера/формы элемента</p>
-					</section>
-				</div>
-				<div class="content__3D">
-					<section class="content__block">
-						<h2>perspective, perspective-origin</h2>
-						<div class="content__wrapper3d">
-							<div class="content__perspective">perspective, perspective-origin</div>
+					</div>
+				</section>
+				<section class="section">
+					<h2>Отступы и позиционирование</h2>
+					<p>Если относительно объекта применяется абсолютное позиционирование, то стоит выбирать метод применения отступов в зависимости от ситуации:</p>
+					<div class="section__item section__item_position">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nam nulla repellat sapiente modi maxime iure magnam deleniti quo ipsum tempora officiis, vel alias blanditiis consectetur aperiam labore sunt. Nulla.
+					</div>
+				</section>
+				<section class="section">
+					<h2>Отступы и overflow: hidden</h2>
+					<p>С помощью внутреннего отступа Padding можно отобразить скрытую часть объекта</p>
+					<div class="section__block section__block_hidden">
+						<div class="section__item section__item_color-3 section__item_hidden"></div>
+					</div>
+				</section>
+				<section class="section">
+					<h2>Центровка блока.</h2>
+					<p>С помощью внешнего отступа Margin можно отцентровать блочный объект с заданным ограничением ширины</p>
+					<div class="section__item section__item_color-1 section__item_center"></div>
+				</section>
+				<section class="section">
+					<h2>Отрицательные значения Margin</h2>
+					<p>Margin может иметь отрицательные значения. Тем самым сдвигая сам элемент и все последующие элементы.</p>
+					<div class="section__block">
+						<h3>Сдвиг вверх</h3>
+						<div class="section__item section__item_color-1 section__item_minus">
+							Объект №1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 						</div>
-						<p><strong>perspective, perspective-origin</strong> - установка глубины и смена точки начала координат</p>
-					</section>
-					<section class="content__block">
-						<h2>translate3d (x, y, z)</h2>
-						<div class="content__wrapper3d">
-							<div class="content__translate3D">translate3D</div>
+						<div class="section__item section__item_color-2 section__item_minus section__item_minus-top">
+							Объект №2 (отрицательный отступ вверх) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 						</div>
-						<p><strong>translate3D</strong> - по аналогии со своим 2D братом это значение задает перемещение элемента, но, в 3D-пространстве. Помимо оси X и Y добавляется ось Z.</p>
-					</section>
-					<section class="content__block">
-						<h2>scale3d (x, y, z)</h2>
-						<div class="content__wrapper3d">
-							<div class="content__scale3D">scale3D</div>
+						<div class="section__item section__item_color-3 section__item_minus">
+							Объект №3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 						</div>
-						<p><strong>scale3D</strong> - задает трехмерное масштабирование по одной из осей X, Y, Z</p>
-					</section>
-					<section class="content__block">
-						<h2>rotate3d (x, y, z, deg)</h2>
-						<div class="content__wrapper3d">
-							<div class="content__rotate3d">rotate3d</div>
-						</div>
-						<p><strong>rotate3d</strong> - вращает элемент относительно трех осей. Элемент поворачивается под углом, задаваемым последним параметром относительно вектора направления X, Y, Z</p>
-					</section>
-					<section class="content__block">
-						<h2>matrix3d (n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</h2>
-						<div class="content__wrapper3d">
-							<div class="content__matrix3d">matrix3d</div>
-						</div>
-						<p><strong>matrix3d</strong> - задает трехмерное преобразование как однородную матрицу размером 4×4 с шестнадцатью значениями в столбцах</p>
-					</section>
-					<section class="content__block">
-						<h2>Множественные 3D трансформации</h2>
-						<div class="content__wrapper3d">
-							<div class="content__multi3d">
-								translate3d <br> rotate3d
-							</div>
-						</div>
-						<p>Запись нескольких 3D значений в одно свойство transform.</p>
-					</section>
-					<section class="content__block">
-						<h2>transform-style</h2>
-						<div class="content__transform-style-wrapper">
-							<div class="content__transform-style">transform <br> style</div>
-						</div>
-						<p><strong>transform-style</strong> - задает стиль трансформации </p>
-					</section>
-					<section class="content__block">
-						<h2>Backface-visibility</h2>
-						<div class="flip">
-							<div class="flip__body">
-								<div class="flip__front">
-									FONT
+					</div>
+					<div class="section__block">
+						<h3>Отступы FLEX-конструкции</h3>
+						<div class="section__row">
+							<div class="section__column">
+								<div class="section__item section__item_color-2 section__item_flex">
+									Контент внутри flex-конструкции. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 								</div>
-								<div class="flip__back">
-									BACK
+							</div>
+							<div class="section__column">
+								<div class="section__item section__item_color-2 section__item_flex">
+									Контент внутри flex-конструкции. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
+								</div>
+							</div>
+							<div class="section__column">
+								<div class="section__item section__item_color-2 section__item_flex">
+									Контент внутри flex-конструкции. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 								</div>
 							</div>
 						</div>
-						<p>Свойство определяет, будет ли видна пользователю обратная сторона элемента.</p>
-					</section>
-				</div>
+					</div>
+					<div class="section__block">
+						<h3>Комбинация с padding</h3>
+						<div class="section__slider slider">
+							<div class="slider__item">
+								<div class="slider__image"></div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__image"></div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__image"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section">
+					<h2>Схлопывание Margin</h2>
+					<p>При состыковке вертикальных внешних отступов они схлопываются.</p>
+					<div class="section__item section__item_color-1 section__item_collapse">
+						Объект №1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
+					</div>
+					<div class="section__item section__item_color-2 section__item_collapse section__item_collapse-top">
+						Объект №2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
+					</div>
+					<div class="section__item section__item_color-3 section__item_collapse">
+						Объект №3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
+					</div>
+					<p>
+						<ul class="section__list">
+							<li>Когда оба значения margin положительные, итоговый размер поля будет равен бóльшему значению.</li>
+							<li>Если одно из значений является отрицательным, то для вычисления размера поля нужно получить сумму значений.</li>
+							<li>Если оба значения отрицательные, сравниваются модули этих чисел и выбирается число, бóльшее по модулю </li>
+							<li>В случае, когда значения указаны в разных единицах CSS, они приводятся к одной, после чего сравниваются и выбирается бóльшее значение.</li>
+							<li>Если у потомка поле margin больше, чем у родителя, то приоритет отдается ему. В этом случае размеры верхнего и нижнего полей родителя станут такими, как задано у потомка. При этом расстояния между родителем и потомком не будет.</li>
+						</ul>
+					</p>
+				</section>
+				<section class="section">
+					<h2>Принципы применения отступов</h2>
+					<p>Если мы хотим что бы наша верстка была надежной и гибкой, стоит придерживаться следующих принципов применения отступов:</p>
+					<div class="section__block">
+						<h3>Отступы следует задавать от предыдущего элемента к следующему</h3>
+						<h4>Сверху вниз</h4>
+						<div class="section__item section__item_color-1 section__item_bottom">
+							Объект №1
+						</div>
+						<div class="section__item section__item_color-2 section__item_bottom">
+							Объект №2
+						</div>
+						<div class="section__item section__item_color-3 section__item_bottom">
+							Объект №3
+						</div>
+						<br>
+						<h4>Слева направо</h4>
+						<div class="section__items">
+							<div class="section__item section__item_color-1 section__item_right">
+								Объект №1
+							</div>
+							<div class="section__item section__item_color-2 section__item_right">
+								Объект №2
+							</div>
+							<div class="section__item section__item_color-3 section__item_right">
+								Объект №3
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>У последнего элемента группы, отступ следует обнулять</h3>
+						<div class="section__body section__body_last">
+							<ul class="section__list">
+								<li>Пункт №1</li>
+								<li>Пункт №2</li>
+								<li>Пункт №3</li>
+								<li>Пункт №4</li>
+							</ul>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Отступы задаются самому верхнему родителю в конструкции (доме)</h3>
+						<div class="section__body section__body_parent">
+							<div class="section__item section__item_parent">
+								<ul class="section__list">
+									<li>Пункт №1</li>
+									<li>Пункт №2</li>
+									<li>Пункт №3</li>
+									<li>Пункт №4</li>
+								</ul>
+							</div>
+							<div class="section__item section__item_parent">
+								<ul class="section__list">
+									<li>Пункт №1</li>
+									<li>Пункт №2</li>
+									<li>Пункт №3</li>
+									<li>Пункт №4</li>
+								</ul>
+							</div>
+							<div class="section__item section__item_parent">
+								<ul class="section__list">
+									<li>Пункт №1</li>
+									<li>Пункт №2</li>
+									<li>Пункт №3</li>
+									<li>Пункт №4</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Внешние отступы не следует задавать для независимых объектов (БЭМ блок)</h3>
+						<div class="portfolio">
+							<div class="portfolio__header header">
+								<div class="header__title">Заголовок</div>
+								<div class="header__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+							</div>
+							<div class="portfolio__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quidem totam consectetur ratione modi debitis facilis officia quisquam, explicabo cum ad optio perferendis, enim at laboriosam molestiae a aut neque?
+							</div>
+						</div>
+						<div class="contacts">
+							<div class="contacts__header header">
+								<div class="header__title">Заголовок</div>
+								<div class="header__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+							</div>
+							<div class="contacts__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quidem totam consectetur ratione modi debitis facilis officia quisquam, explicabo cum ad optio perferendis, enim at laboriosam molestiae a aut neque?
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Отступы должны улучшать удобство пользования и восприятие</h3>
+						<div class="section__compare compare">
+							<h4>Лишние отступы</h4>
+							<div class="compare__row">
+								<div class="compare__column">
+									<h5>Плохо</h5>
+									<div class="compare__item compare__item_bad compare__item_color-1">
+										<div class="compare__title">Заголовок</div>
+										<div class="compare__text">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. In esse dicta optio? Facilis corporis rem similique vitae hic quo? Quidem laudantium labore illo, quis aut veniam sit maxime doloribus. Error!
+										</div>
+									</div>
+								</div>
+								<div class="compare__column">
+									<h5>Хорошо</h5>
+									<div class="compare__item compare__item_color-2">
+										<div class="compare__title">Заголовок</div>
+										<div class="compare__text">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. In esse dicta optio? Facilis corporis rem similique vitae hic quo? Quidem laudantium labore illo, quis aut veniam sit maxime doloribus. Error!
+										</div>
+									</div>
+								</div>
+							</div>
+							<h4>Разрыв объектов</h4>
+							<div class="compare__row">
+								<div class="compare__column">
+									<h5>Плохо</h5>
+									<div class="compare__item compare__item_color-1">
+										<div class="compare__title compare__title_bad">Заголовок</div>
+										<div class="compare__text">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. In esse dicta optio? Facilis corporis rem similique vitae hic quo? Quidem laudantium labore illo, quis aut veniam sit maxime doloribus. Error!
+										</div>
+									</div>
+								</div>
+								<div class="compare__column">
+									<h5>Хорошо</h5>
+									<div class="compare__item compare__item_color-2">
+										<div class="compare__title">Заголовок</div>
+										<div class="compare__text">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. In esse dicta optio? Facilis corporis rem similique vitae hic quo? Quidem laudantium labore illo, quis aut veniam sit maxime doloribus. Error!
+										</div>
+									</div>
+								</div>
+							</div>
+							<h4>Площадь нажатия</h4>
+							<div class="compare__row">
+								<div class="compare__column">
+									<h5>Плохо</h5>
+									<a class="compare__link compare__link_bad" href="#">+</a>
+								</div>
+								<div class="compare__column">
+									<h5>Хорошо</h5>
+									<a class="compare__link" href="#">+</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
 	</body>
