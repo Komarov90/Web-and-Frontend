@@ -1,148 +1,105 @@
-
-let user = 'Вася' let age = 36
-
-let myage = 36;
-
-const BLOCK_SIZE = 14 + 50;
-
-const BLOCK_HEIGHT = 100;
-
-if (true) {
-	var size = 15;
-}
-console.log(size);
-
-let age;
-let info123;
-let $size;
-let _color;
-
-let size;
-let age;
-let leftSidebarSize;
-
-let sidebarsize;
-
-let myLifeStyle;
-
-myLifeStyle = 'freelance';
-
-let myLifeStyle = 'freelance';
-
-console.log(myLifeStyle);
-
-let myName = 'Фрилансер по жизни', myAge = 36, myMessage = 'Живи, а работай в свободное время!';
-
-let myName = 'Фрилансер по жизни',
-	myAge = 36,
-	myMessage = 'Живи, а работай в свободное время!';
-
-let myName = 'Фрилансер по жизни';
-let myAge = 36;
-let myMessage = 'Живи, а работай в свободное время!';
-
-let myAge = 36;
-myAge = 18;
-console.log(myAge);
-
-
-let myAge = 36;
-let myNewAge = 18;
-
-
-myAge = myNewAge;
-console.log(myAge);
-
-myAge = 36;
-console.log(myAge);
-
-"use strict"
-
-let myAge = 36;
-console.log(myAge);
-
-
-function testBlock() {
-	console.log('Учим');
-	console.log('JS');
-}
-testBlock();
-
-function testBlock() {
-	let myAge = 36;
-	console.log(myAge);
-}
-testBlock();
-
-console.log(myAge);
-
-let myAge = 36;
-
-function testBlock() {
-	let myAge = 18;
-	console.log(myAge);
-}
-testBlock();
-
-console.log(myAge);
-
-let myAge = 18;
-
-for (let i = 0; i < 3; i++) {
-	console.log(i);
-
-}
-for (let i = 0; i < 3; i++) {
-	console.log(i);
-}
-
-const BLOCK_SIZE = 25;
-const COLOR_RED = "#F00";
-
-
-const summSizes = 25 + 30;
-
-const userProfile = {
-	name: 'Фрилансер',
-	age: 36,
-	message: 'Живи, а работай в свободное время!'
-}
-console.log(userProfile);
-
-userProfile.age = 18;
-console.log(userProfile);
-
-
-function testBlockLet() {
-	let myAgeLet = 36;
-}
-testBlockLet();
-
-function testBlockVar() {
-	var myAgeVar = 36;
-}
-testBlockVar();
-
-console.log(myAgeVar);
-*/
-
-/*
-if (true) {
-	let sizeLet = 50;
-}
-
-if (true) {
-	var sizeVar = 50;
-}
-
-console.log(sizeVar);
-
-let userName = 'Фрилансер по жизни';
-
-userName = 36;
-
-userName = 'Живи, а работай в свободное время!';
-
-let userName = 'Фрилансер по жизни';
 let userAge = 36;
-let userMassage = 'Живи, а работай в свободное время!';
+let userInfo = "Фрилансер ${userAge}";
+
+let userHeight = 145 / 0;
+console.log(userHeight);
+
+let userName;
+console.log(typeof userName);
+
+let userSize = "45" / "8";
+console.log(typeof userSize);
+
+let userName;
+console.log(typeof userName);
+console.log(userName);
+
+if (userName === undefined) {
+	console.log('Переменная НЕ определена');
+} else {
+	console.log('Переменная определена');
+}
+
+if (typeof userName === 'undefined') {
+	console.log('Переменная НЕ определена');
+} else {
+	console.log('Переменная определена');
+}
+
+let userName = null;
+console.log(userName);
+т
+let block = document.querySelector('.block');
+
+console.log(block);
+
+console.log(typeof block);
+
+const bigInteger = 12345678901234567890123456789n;
+console.log(typeof bigInteger);
+
+let userAge = 36;
+let userAgeInfo = `Возраст: ${userAge}`;
+console.log(userAgeInfo);
+
+let userInfo = {
+	name: "Фрилансер по жизни",
+	age: 36
+}
+console.log(userInfo);
+console.log(typeof userInfo);
+
+let id = Symbol("id");
+console.log(typeof id);
+
+let funcVariable = function name(params) {
+
+}
+console.log(typeof funcVariable);
+
+let userAge = 58;
+console.log(userAge);
+console.log(typeof userAge);
+
+userAge = String(userAge);
+
+console.log(userAge);
+console.log(typeof userAge);
+
+let userTrue = true;
+console.log(userTrue);
+console.log(typeof userTrue);
+
+userTrue = String(userTrue);
+
+console.log(userTrue);
+console.log(typeof userTrue);
+
+let userAge = "58";
+console.log(userAge);
+console.log(typeof userAge);
+
+userAge = Number(userAge);
+
+console.log(userAge);
+console.log(typeof userAge);
+
+let userAge = "Фрилансер";
+
+userAge = Number(userAge);
+
+console.log(userAge);
+console.log(typeof userAge);
+
+let userAge = "72" / "2";
+console.log(userAge);
+console.log(typeof userAge);
+
+let userAge = "";
+console.log(userAge);
+console.log(typeof userAge);
+
+userAge = Boolean(userAge);
+
+console.log(userAge);
+console.log(typeof userAge);
