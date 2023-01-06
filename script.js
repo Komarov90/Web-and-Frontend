@@ -1,105 +1,246 @@
-let userAge = 36;
-let userInfo = "Фрилансер ${userAge}";
+let x;
+x = 5 + 8;
+console.log(`Результат сложения: ${x}`);
 
-let userHeight = 145 / 0;
-console.log(userHeight);
+x = 9 - 5;
+console.log(`Результат вычитания: ${x}`);
 
-let userName;
-console.log(typeof userName);
+x = 2 * 3;
+console.log(`Результат умножения: ${x}`);
 
-let userSize = "45" / "8";
-console.log(typeof userSize);
+x = 10 / 2;
+console.log(`Результат деления: ${x}`);
 
-let userName;
-console.log(typeof userName);
-console.log(userName);
+x = 11 % 3;
+console.log(`Результат взятия остатка от деления: ${x}`);
 
-if (userName === undefined) {
-	console.log('Переменная НЕ определена');
-} else {
-	console.log('Переменная определена');
-}
+x = 5 ** 3;
+console.log(`Результат возведения в степень: ${x}`);
 
-if (typeof userName === 'undefined') {
-	console.log('Переменная НЕ определена');
-} else {
-	console.log('Переменная определена');
-}
+let resultOne = "Фрилансер" + " " + "по" + " " + "жизни";
+console.log(resultOne);
 
-let userName = null;
-console.log(userName);
-т
-let block = document.querySelector('.block');
+let resultTwo = "Фрилансер " + 58;
+console.log(resultTwo);
+console.log(typeof resultTwo);
 
-console.log(block);
+let resultThree = 58 + " Фрилансер";
+console.log(resultThree);
 
-console.log(typeof block);
+let resultFour = 2 + "2";
+console.log(resultFour);
 
-const bigInteger = 12345678901234567890123456789n;
-console.log(typeof bigInteger);
+let resultFive = 58 - 20 + " Фрилансер";
+console.log(resultFive);
 
-let userAge = 36;
-let userAgeInfo = `Возраст: ${userAge}`;
-console.log(userAgeInfo);
+let resultOne = "25" - 5;
+console.log(resultOne);
+console.log(typeof resultOne);
 
-let userInfo = {
-	name: "Фрилансер по жизни",
-	age: 36
-}
-console.log(userInfo);
-console.log(typeof userInfo);
+let resultTwo = 10 * "80";
+console.log(resultTwo);
+console.log(typeof resultOne);
 
-let id = Symbol("id");
-console.log(typeof id);
+let resultThree = 3 * "Фрилансер";
+console.log(resultThree);
+console.log(typeof resultOne);
 
-let funcVariable = function name(params) {
+let resultOne = +"25";
+console.log(resultOne);
+console.log(typeof resultOne);
 
-}
-console.log(typeof funcVariable);
+let resultTwo = +10;
+console.log(resultTwo);
+console.log(typeof resultTwo);
 
-let userAge = 58;
-console.log(userAge);
-console.log(typeof userAge);
+let users = "25";
+let admins = "10";
+console.log(users + admins);
 
-userAge = String(userAge);
+console.log(+users + +admins);
 
-console.log(userAge);
-console.log(typeof userAge);
+console.log(Number(users) + Number(admins));
 
-let userTrue = true;
-console.log(userTrue);
-console.log(typeof userTrue);
+let resultOne = 2 - 1 * 5;
+console.log(resultOne);
 
-userTrue = String(userTrue);
+let resultTwo = (2 - 1) * 5;
+console.log(resultTwo);
 
-console.log(userTrue);
-console.log(typeof userTrue);
+let resultThree = 2 - 1 + 5;
+console.log(resultThree);
 
-let userAge = "58";
-console.log(userAge);
-console.log(typeof userAge);
+let a = 1 + 2;
+let b = 2;
 
-userAge = Number(userAge);
+let result = 8 - (a = b + 3);
+console.log("Результат в скобках: " + a);
+console.log("Общий результат: " + result);
 
-console.log(userAge);
-console.log(typeof userAge);
+let resultOne = resultTwo = resultThree = 1 + 2;
+console.log(resultOne);
+console.log(resultTwo);
+console.log(resultThree);
 
-let userAge = "Фрилансер";
+let resultOne = 1 + 2;
 
-userAge = Number(userAge);
+resultTwo = resultOne;
+resultThree = resultOne;
 
-console.log(userAge);
-console.log(typeof userAge);
+console.log(resultOne);
+console.log(resultTwo);
+console.log(resultThree);
 
-let userAge = "72" / "2";
-console.log(userAge);
-console.log(typeof userAge);
+let users = 5;
+users = users + 3;
+users = users * 2;
 
-let userAge = "";
-console.log(userAge);
-console.log(typeof userAge);
 
-userAge = Boolean(userAge);
+let users = 5;
+console.log(users);
+users += 3;
+console.log(users);
+users *= 2;
+console.log(users);
 
-console.log(userAge);
-console.log(typeof userAge);
+let users = 5;
+console.log(users);
+users += 1 + 2;
+console.log(users);
+
+let addUser = 2;
+addUser++;
+console.log(addUser);
+
+addUser = addUser + 1;
+addUser += 1;
+
+let removeUser = 2;
+removeUser--;
+console.log(removeUser);
+
+let usersCounter = 0;
+let newUsers = usersCounter++;
+console.log(newUsers);
+
+//Префиксная форма
+let usersCounter = 0;
+let newUsers = ++usersCounter;
+console.log(newUsers);
+
+let usersCounter = 0;
+++usersCounter;
+console.log(usersCounter);
+
+let usersCounter = 0;
+console.log(++usersCounter);
+
+let usersCounter = 0;
+console.log(usersCounter++);
+console.log(usersCounter);
+
+let usersCounter = 0;
+let newUsers = 2 * ++usersCounter;
+console.log(newUsers);
+
+let usersCounter = 0;
+++usersCounter;
+let newUsers = 2 * usersCounter;
+console.log(newUsers);
+
+let usersCounter = (8 + 2, 19 + 1);
+console.log(usersCounter);
+
+
+console.log(2 > 1);
+console.log(4 < 2);
+console.log(58 == 36);
+console.log(8 != 9);
+
+let result = 11 > 10;
+console.log(result);
+
+console.log('Б' > 'А');
+
+console.log('Скрипт' > 'Скрипка');
+
+console.log('Слайдер' > 'Слайд');
+
+console.log('Фрилансер' > 'фрилансер');
+
+
+console.log('58' > 10);
+console.log('007' == 7);
+
+
+console.log(true == 1);
+console.log(false == 0);
+
+let itemA = 0;
+let itemB = "0";
+
+console.log(Boolean(itemA));
+console.log(Boolean(itemB));
+
+console.log(itemA == itemB);
+
+console.log(0 == false);
+
+console.log(0 === false);
+console.log('007' === 7);
+console.log('58' !== 58);
+
+console.log(null === undefined);
+
+console.log(null == undefined);
+
+console.log(null > 0);
+console.log(null == 0);
+console.log(null >= 0);
+
+console.log(undefined > 0);
+console.log(undefined == 0);
+console.log(undefined >= 0);
+
+console.log(true || true);
+console.log(false || true);
+console.log(true || false);
+console.log(false || false);
+
+console.log(1 || 0);
+
+console.log(true || 'фрилансер');
+
+console.log(null || 58);
+
+console.log(null || 'фрилансер' || 0);
+
+console.log(undefined || '' || null || 0);
+
+let userName = '';
+let userNickName = '';
+
+let user = userName || userNickName || "Без имени";
+console.log(user);
+
+let admins = 10;
+let users = 5;
+admins > users || users++;
+console.log(users);
+
+console.log(true && true);
+console.log(false && true);
+console.log(true && false);
+console.log(false && false);
+
+console.log('Фрилансер' && 0 && 2 && 3);
+console.log(1 && 2 && null && 3);
+console.log('15' && '42');
+
+let users = 0;
+(users > 0) && console.log(`Пользователей ${users}`);
+
+console.log(!null);
+console.log(!1);
+console.log(!'');
+console.log(!'фрилансер');
