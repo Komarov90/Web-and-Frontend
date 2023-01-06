@@ -1,66 +1,94 @@
-if (2 > 5) {
-	console.log(message);
-}
-
-let first = 5;
-let second = 5;
-
-if (first === second) {
-	console.log(message);
-}
-
-if (2 + 1 === 3 && "1" == 1 || 10 > 5 && 10 === 1) {
-	console.log(message);
-}
-
-if ("") {
-	console.log(message);
-}
-
-if (2 > 1) console.log(message);
-
-
-if (58 / 2 > 80) {
-	console.log(message);
-} else {
-	console.log('Условие не выполнено :(');
+let num = 0;
+while (num < 5) {
+	console.log(num);
+	num++;
 }
 
 
-if (number > 10) {
-	console.log(message);
-} else {
-	console.log('Условие не выполнено :(');
-}
-
-if (number > 50) {
-	console.log('5 больше 50');
-} else if (number > 30) {
-	console.log('5 больше 30');
-} else if (number > 10) {
-	console.log('5 больше 10');
-} else if (number > 1) {
-	console.log('5 больше 1');
-} else {
-	console.log('Условие не выполнено :(');
+let num = 5;
+while (num) {
+	console.log(num);
+	num--;
 }
 
 
-let message = "Привет";
+let num = 5;
+while (num) console.log(num--);
 
-let messageEnd;
-if (5 > 1) {
-	messageEnd = ", Вася!";
-} else {
-	messageEnd = ", Оля!";
+
+let num = 0;
+do {
+	console.log(num);
+	num++;
+} while (num < 0);
+
+for (Начало; Условие; Шаг) {
+
 }
 
-let messageEnd = 5 > 10 ? ", Вася!" : ", Оля!";
 
-message += messageEnd;
-console.log(message);
+for (let num = 0; num < 5; num++) {
+	console.log(num);
+}
 
-let message = 5 > 10 ? "Привет, Вася!" : "Привет, Оля!";
-console.log(message);
+for (let num = 0; num < 5; num++) {
+	console.log(num);
+}
+console.log(num);
 
 
+let num;
+for (num = 0; num < 5; num++) {
+	console.log(num);
+}
+console.log(`Вывод вне цикла: ${num}`);
+
+
+let num = 0;
+for (; num < 5; num++) {
+	console.log(num);
+}
+
+
+let num = 0;
+for (; num < 5;) {
+	num++;
+	console.log(num);
+}
+
+let num = 0;
+for (;;) {
+	num++;
+	console.log(num);
+}
+
+
+let num = 0;
+for (; num < 5; num++) {
+	console.log(num);
+	if (num == 2) break;
+}
+console.log(`Работа окончена, num = ${num}`);
+
+
+let num = 0;
+for (; num < 5; num++) {
+	if (num == 2) continue;
+	console.log(num);
+}
+
+
+let num = 0;
+for (; num < 5; num++) {
+	(num != 2) ? console.log(num) : continue;
+}
+
+
+firstFor: for (let num = 0; num < 2; num++) {
+	for (let size = 0; size < 3; size++) {
+		if (size == 2) {
+			continue firstFor;
+		}
+		console.log(size);
+	}
+}
