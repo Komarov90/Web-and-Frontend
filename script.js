@@ -1,288 +1,158 @@
-let userInfo = {
-	name: "Вася", // Свойство объекта
-	age: 30, // Последняя (висячая) запятая
-};
+let someNum = 458;
+console.log(someNum);
 
-console.log(userInfo);
-console.log(userInfo.name);
+let someNums = 4.58;
+console.log(someNums);
 
+let someBigNum = 1000000;
+console.log(someBigNum);
 
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	"likes javascript": true,
-};
-console.log(userInfo.name);
-console.log(userInfo['name']);
-console.log(userInfo["likes javascript"]);
+let someBigNum = 1e6;
+console.log(someBigNum);
 
 
-let firstPart = "likes";
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	[firstPart + " javascript"]: true,
-};
-console.log(userInfo["likes javascript"]);
+let someLittleNum = 0.000001;
+console.log(someLittleNum);
 
-let firstPart = "likes";
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	[firstPart]: true,
-};
-console.log(userInfo[firstPart]);
+let someLittleNum = 1e-6;
+console.log(someLittleNum);
 
-let userInfo = {
-	let: "Вася",
-	for: 30,
-};
-console.log(userInfo.let);
-console.log(userInfo.for);
+console.log(0b11111111);
+console.log(0o377);
+
+let num = 255;
+console.log(num.toString(16));
+console.log(num.toString(8));
+console.log(num.toString(2));
 
 
-let userInfo = {
-	0: "Вася",
-};
-console.log(userInfo[0]);
-console.log(userInfo["0"]);
+let numOne = Math.floor(5.8);
+let numTwo = Math.floor(2.2);
+let numThree = Math.floor(-2.2);
+
+console.log(numOne);
+console.log(numTwo);
+console.log(numThree);
 
 
-let id = Symbol("id");
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	[id]: "Некое значение"
-};
-console.log(userInfo);
+Math.ceil - Округление в большую сторону
+
+let numOne = Math.ceil(5.8);
+let numTwo = Math.ceil(2.2);
+let numThree = Math.ceil(-2.2);
+
+console.log(numOne);
+console.log(numTwo);
+console.log(numThree);
 
 
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	address: {
-		city: "Uzhhorod",
-		street: "Freedom",
-	}
-}
-console.log(userInfo);
-console.log(userInfo.address);
-console.log(userInfo.address.city);
+let numOne = Math.round(5.8);
+let numTwo = Math.round(2.2);
+let numThree = Math.round(-2.2);
 
-function makeUserInfo(name, age) {
-	return {
-		name: name,
-		age: age,
-	};
-}
-let user = makeUserInfo("Вася", 30);
-console.log(user);
+console.log(numOne);
+console.log(numTwo);
+console.log(numThree);
 
 
-function makeUserInfo(name, age) {
-	return {
-		name,
-		age,
-		"likes javascript": true,
-	};
-}
-let user = makeUserInfo("Вася", 30);
-console.log(user);
-
-let userInfo = {
-	name: "Вася",
-}
-
-console.log(userInfo);
-
-userInfo.age = 30;
-
-console.log(userInfo);
-
-userInfo['likes javascript'] = true;
-
-console.log(userInfo);
-
-userInfo.address = {
-	city: "Uzhhorod",
-	street: "Freedom",
-};
-
-console.log(userInfo);
+let numOne = Math.round(5.845);
+console.log(numOne); // 6
 
 
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	"likes javascript": true
-}
-console.log(userInfo);
-
-delete userInfo.age;
-
-console.log(userInfo);
-
-delete userInfo["likes javascript"];
-
-console.log(userInfo);
-
-let userInfo = {
-	name: "Вася",
-	age: 30,
-}
-console.log(userInfo);
-
-userInfo.age = 18;
-
-console.log(userInfo);
-
-const userInfo = {
-	name: "Вася",
-	age: 30,
-}
-console.log(userInfo);
-
-userInfo.age = 18;
-
-console.log(userInfo);
+let numOne = Math.round(5.845 * 10) / 10;
+console.log(numOne);
 
 
-let userInfo = {
-	name: "Вася",
-	age: 30,
+let numTwo = Math.round(5.845 * 100) / 100;
+console.log(numTwo);
+
+
+let numThree = Math.round(5.8449 * 100) / 100;
+console.log(numThree);
+
+
+let numOne = 5.845;
+console.log(numOne.toFixed(1));
+
+
+console.log(+numOne.toFixed(1));
+console.log(Number(numOne.toFixed(1)));
+
+
+let numOne = Math.round(1.005 * 100) / 100;
+console.log(numOne);
+
+let numTwo = 12.35;
+console.log(numTwo.toFixed(1));
+
+
+let problem = 0.1 + 0.2 === 0.3;
+console.log(problem);
+console.log(0.1 + 0.2);
+
+
+let sourceNum = 1.005 + Number.EPSILON;
+let numFour = Math.round(sourceNum * 100) / 100;
+console.log(numFour);
+
+console.log(sourceNum * 100);
+console.log(Math.round(sourceNum * 100));
+
+
+console.log(Number(25 + "Привет!"));
+console.log(isNaN(25 + "Привет!"));
+
+if (25 + "Привет!" !== NaN) {
+	console.log('Я не NaN');
 }
 
-console.log(userInfo);
-
-let user = userInfo;
-
-console.log(user);
-
-user.age = 18;
-
-console.log(userInfo);
+console.log(NaN === NaN);
 
 
-let userInfo = {
-	name: "Вася",
-	age: 30,
-}
-
-let user = Object.assign({}, userInfo);
-
-user.age = 18;
-
-console.log(userInfo);
-console.log(user);
+console.log(isFinite("25")); // "25" -> 25 -> true
+console.log(isFinite("Привет!")); // NaN -> false
+console.log(isFinite(10 / 0)); // Infinity -> false
 
 
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	address: {
-	city: "Uzhhorod",
-	street: "Freedom",
-	//}
-}
-console.log(userInfo?.address?.street);
-
-let userInfo = {
-	age: 30,
-	address: {
-		city: "Uzhhorod",
-		street: "Freedom",
-	}
-}
-if ("name" in userInfo) {
-	console.log(userInfo.name);
-}
-
-let userInfo = {
-	name: undefined,
-}
-if (userInfo.name) { false
-	console.log(userInfo.name);
-}
-if ("name" in userInfo) { true
-	console.log(userInfo.name);
-}
+let valueOne = +"150";
+console.log(valueOne);
+console.log(typeof valueOne);
 
 
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	address: {
-		city: "Uzhhorod",
-		street: "Freedom",
-	}
-}
-
-for (let key in userInfo) {
-	console.log(key);  name, age, address
-	console.log(userInfo[key]);
-}
-
-for (let key in userInfo.address) {
-	console.log(key); city, street
-	console.log(userInfo.address[key]);
-}
-
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	address: {
-		city: "Uzhhorod",
-		street: "Freedom",
-	},
-	showInfo() {
-		console.log(`${userInfo.name}, ${userInfo.age} лет. Адрес: г.${userInfo.address.city}, ул.${userInfo.address.street}`);
-	}
-}
-userInfo.showInfo();
+let valueTwo = +"150px";
+console.log(valueTwo);
+console.log(typeof valueTwo);
 
 
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	address: {
-		city: "Uzhhorod",
-		street: "Freedom",
-	},
-	showInfo() {
-		console.log(`${this.name}, ${this.age} лет. Адрес: г.${this.address.city}, ул.${this.address.street}`);
-	}
-}
-userInfo.showInfo();
+let valueOne = parseInt("150.58px");
+console.log(valueOne);
+console.log(typeof valueOne);
 
 
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	address: {
-		city: "Uzhhorod",
-		street: "Freedom",
-	},
-	showInfo() {
-		let show = () => console.log(`${this.name}, ${this.age} лет. Адрес: г.${this.address.city}, ул.${this.address.street}`);
-		show();
-	}
-}
-userInfo.showInfo();
+let valueTwo = parseFloat("150.58px");
+console.log(valueTwo);
+console.log(typeof valueTwo);
 
 
-let userInfo = {
-	name: "Вася",
-	age: 30,
-	address: {
-		city: "Uzhhorod",
-		street: "Freedom",
-	},
-	showInfo() {
-		console.log(`${this.name}, ${this.age} лет. Адрес: г.${this.address.city}, ул.${this.address.street}`);
-	}
-}
-userInfo.showInfo();
+let valueTwo = parseFloat("a150.58px");
+console.log(valueTwo);
+console.log(typeof valueTwo);
 
-let user = userInfo;
-userInfo = null;
-user.showInfo();
+
+console.log(parseInt('0xff', 16));
+console.log(parseInt('ff', 16));
+
+
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+
+
+console.log(Math.max(5, 85, -49));
+console.log(Math.min(5, 85, -49));
+
+
+let num = -58;
+console.log(Math.abs(num));
+
+console.log(Math.pow(5, 8));
