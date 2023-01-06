@@ -1,324 +1,288 @@
-function showMessage() {
-	console.log('Сообщение');
-}
-
-
-function getSumm() {
-	let numOne, numTwo;
-
-	function getNumOne() {
-		numOne = 1;
-	}
-	function getNumTwo() {
-		numTwo = 2;
-	}
-	getNumOne();
-	getNumTwo();
-
-	let numSumm = numOne + numTwo;
-	console.log(numSumm);
-}
-getNumOne();
-getSumm();
-
-
-"use strict"
-if (2 > 1) {
-	function getSumm() {
-		let numOne, numTwo;
-
-		function getNumOne() {
-			numOne = 1;
-		}
-		function getNumTwo() {
-			numTwo = 2;
-		}
-		getNumOne();
-		getNumTwo();
-
-		let numSumm = numOne + numTwo;
-		console.log(numSumm);
-	}
-}
-getSumm();
-
-
-function showMessage() {
-	let message = "Сообщение";
-	console.log(message);
-}
-
-console.log(message);
-
-
-let message;
-
-function showMessage() {
-	message = "Сообщение";
-}
-console.log(message);
-
-showMessage();
-
-
-let message = "Сообщение №1";
-
-function showMessage() {
-	let message = "Сообщение №2";
-	console.log(message);
-}
-console.log(message);
-showMessage();
-
-
-let globalVar = "Я глобальная переменная";
-
-function getSumm() {
-	let numOne, numTwo;
-
-	function getNumOne() {
-		numOne = 1;
-		console.log(globalVar);
-	}
-	function getNumTwo() {
-		numTwo = 2;
-	}
-	getNumOne();
-	getNumTwo();
-
-	let numSumm = numOne + numTwo;
-	console.log(globalVar);
-}
-console.log(globalVar);
-
-getSumm();
-
-
-function calcSumm(numOne = 1, numTwo = 2) {
-	console.log(`Переменная numOne:${numOne}`);
-	console.log(`Переменная numTwo:${numTwo}`);
-
-	let numSumm = numOne + numTwo;
-
-	console.log(`Сумма:${numSumm}`);
-}
-
-calcSumm(5, 5);
-
-
-function calcSumm(numOne, numTwo, more, less) {
-	let numSumm = numOne + numTwo;
-
-	if (numSumm > 3) {
-		more();
-	} else {
-		less();
-	}
-}
-
-function showMoreMessage() {
-	console.log('Больше чем 3');
-}
-function showLessMessage() {
-	console.log('Меньше чем 3');
-}
-calcSumm(1, 1, showMoreMessage, showLessMessage);
-
-
-function calcSumm(numOne, numTwo) {
-
-	let numSumm = numOne + numTwo;
-	return numSumm;
-
-}
-let funcRezult = calcSumm(1, 2);
-
-console.log(`Сумма: ${funcRezult}`);
-
-
-function calcSumm(numOne, numTwo) {
-
-	let numSumm = numOne + numTwo;
-
-	if (numSumm >= 3) {
-		return numSumm;
-	} else {
-		return 'Сумма меньше 3';
-	}
-
-}
-let funcRezult = calcSumm(1, 2);
-
-console.log(funcRezult);
-
-
-function calcSumm(numOne, numTwo) {
-
-	let numSumm = numOne + numTwo;
-
-	return
-	numSumm;
-
-}
-let funcRezult = calcSumm(1, 2);
-
-console.log(funcRezult);
-
-
-function calcSumm(numOne, numTwo) {
-
-	let numSumm = numOne + numTwo;
-
-	if (numSumm >= 3) {
-		return;
-	}
-}
-calcSumm(5, 5)
-
-
-function getSumm(numOne, numTwo) {
-	let numSumm = calcSumm(numOne, numTwo);
-
-	console.log(numSumm);
-}
-function calcSumm(numOne, numTwo) {
-	return numOne + numTwo;
-
-}
-getSumm(5, 5);
-
-
-function calcSumm(numOne, numTwo) {
-	let result = 1;
-	for (let i = 0; i < numTwo; i++) {
-		result *= numOne;
-	}
-	return result;
-}
-console.log(calcSumm(2, 3));
-
-
-function calcSumm(numOne, numTwo) {
-	if (numTwo === 1) {
-		return numOne;
-	} else {
-		return numOne * calcSumm(numOne, numTwo - 1);
-	}
-}
-console.log(calcSumm(2, 3));
-
-
-let showMessage = function () {
-	console.log('Привет!');
+let userInfo = {
+	name: "Вася", // Свойство объекта
+	age: 30, // Последняя (висячая) запятая
 };
 
-showMessage();
+console.log(userInfo);
+console.log(userInfo.name);
 
 
-function getSumm() {
-	let summ = 1 + 2;
-	console.log(summ);
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	"likes javascript": true,
 };
-
-let someVar = getSumm;
-
-someVar();
-getSumm();
+console.log(userInfo.name);
+console.log(userInfo['name']);
+console.log(userInfo["likes javascript"]);
 
 
-function getSumm() {
-	let summ = 1 + 2;
-	console.log(summ);
+let firstPart = "likes";
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	[firstPart + " javascript"]: true,
 };
-getSumm();
+console.log(userInfo["likes javascript"]);
 
-
-let showMessage = function () {
-	console.log('Привет!');
+let firstPart = "likes";
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	[firstPart]: true,
 };
-showMessage();
+console.log(userInfo[firstPart]);
+
+let userInfo = {
+	let: "Вася",
+	for: 30,
+};
+console.log(userInfo.let);
+console.log(userInfo.for);
 
 
-'use strict'
-if (2 > 1) {
-	function getSumm() {
-		let summ = 1 + 2;
-		console.log(summ);
+let userInfo = {
+	0: "Вася",
+};
+console.log(userInfo[0]);
+console.log(userInfo["0"]);
+
+
+let id = Symbol("id");
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	[id]: "Некое значение"
+};
+console.log(userInfo);
+
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	address: {
+		city: "Uzhhorod",
+		street: "Freedom",
+	}
+}
+console.log(userInfo);
+console.log(userInfo.address);
+console.log(userInfo.address.city);
+
+function makeUserInfo(name, age) {
+	return {
+		name: name,
+		age: age,
 	};
 }
-getSumm();
+let user = makeUserInfo("Вася", 30);
+console.log(user);
 
-let getSumm;
 
-if (2 > 1) {
-	getSumm = function () {
-		let summ = 1 + 2;
-		console.log(summ);
+function makeUserInfo(name, age) {
+	return {
+		name,
+		age,
+		"likes javascript": true,
 	};
 }
-getSumm();
+let user = makeUserInfo("Вася", 30);
+console.log(user);
 
-
-let getMessage = (text, name) => text + ', ' + name + '!';
-console.log(getMessage('Привет', 'Вася'));
-
-
-let getMessage = (text, name) => {
-	let message = text + ', ' + name + '!';
-	return message;
-};
-console.log(getMessage('Привет', 'Вася'));
-
-
-function showMessage(text, name) {
-	console.log(`${text}, ${name}!`);
-	setTimeout(showMessage, 500, text, name);
+let userInfo = {
+	name: "Вася",
 }
 
-setTimeout(showMessage, 500, 'Привет', 'Вася');
+console.log(userInfo);
 
-let result = 0;
-function showNumber(num) {
-	result += num;
-	console.log(result);
-	if (result === 5) {
-		clearInterval(timeId);
+userInfo.age = 30;
+
+console.log(userInfo);
+
+userInfo['likes javascript'] = true;
+
+console.log(userInfo);
+
+userInfo.address = {
+	city: "Uzhhorod",
+	street: "Freedom",
+};
+
+console.log(userInfo);
+
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	"likes javascript": true
+}
+console.log(userInfo);
+
+delete userInfo.age;
+
+console.log(userInfo);
+
+delete userInfo["likes javascript"];
+
+console.log(userInfo);
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+}
+console.log(userInfo);
+
+userInfo.age = 18;
+
+console.log(userInfo);
+
+const userInfo = {
+	name: "Вася",
+	age: 30,
+}
+console.log(userInfo);
+
+userInfo.age = 18;
+
+console.log(userInfo);
+
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+}
+
+console.log(userInfo);
+
+let user = userInfo;
+
+console.log(user);
+
+user.age = 18;
+
+console.log(userInfo);
+
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+}
+
+let user = Object.assign({}, userInfo);
+
+user.age = 18;
+
+console.log(userInfo);
+console.log(user);
+
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	address: {
+	city: "Uzhhorod",
+	street: "Freedom",
+	//}
+}
+console.log(userInfo?.address?.street);
+
+let userInfo = {
+	age: 30,
+	address: {
+		city: "Uzhhorod",
+		street: "Freedom",
 	}
 }
-let timeId = setInterval(showNumber, 1000, 1);
-
-
-setTimeout(function () {
-	console.log('Привет!');
-}, 1000);
-
-setTimeout(() => {
-	console.log('Привет!');
-}, 1000);
-
-
-function showMessageOne() {
-	console.log("А я первый!");
-}
-function showMessageTwo() {
-	console.log("А я второй(");
+if ("name" in userInfo) {
+	console.log(userInfo.name);
 }
 
-setTimeout(showMessageTwo, 0);
-
-showMessageOne();
-
-
-function createMassage(text, name) {
-	return `${text}, ${name}!`;
+let userInfo = {
+	name: undefined,
+}
+if (userInfo.name) { false
+	console.log(userInfo.name);
+}
+if ("name" in userInfo) { true
+	console.log(userInfo.name);
 }
 
-function showMassage(message) {
-	console.log(message);
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	address: {
+		city: "Uzhhorod",
+		street: "Freedom",
+	}
 }
 
-function initMessage(text, name) {
-	showMassage(createMassage(text, name));
+for (let key in userInfo) {
+	console.log(key);  name, age, address
+	console.log(userInfo[key]);
 }
 
-initMessage('Привет', 'Фрилансер');
+for (let key in userInfo.address) {
+	console.log(key); city, street
+	console.log(userInfo.address[key]);
+}
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	address: {
+		city: "Uzhhorod",
+		street: "Freedom",
+	},
+	showInfo() {
+		console.log(`${userInfo.name}, ${userInfo.age} лет. Адрес: г.${userInfo.address.city}, ул.${userInfo.address.street}`);
+	}
+}
+userInfo.showInfo();
+
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	address: {
+		city: "Uzhhorod",
+		street: "Freedom",
+	},
+	showInfo() {
+		console.log(`${this.name}, ${this.age} лет. Адрес: г.${this.address.city}, ул.${this.address.street}`);
+	}
+}
+userInfo.showInfo();
+
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	address: {
+		city: "Uzhhorod",
+		street: "Freedom",
+	},
+	showInfo() {
+		let show = () => console.log(`${this.name}, ${this.age} лет. Адрес: г.${this.address.city}, ул.${this.address.street}`);
+		show();
+	}
+}
+userInfo.showInfo();
+
+
+let userInfo = {
+	name: "Вася",
+	age: 30,
+	address: {
+		city: "Uzhhorod",
+		street: "Freedom",
+	},
+	showInfo() {
+		console.log(`${this.name}, ${this.age} лет. Адрес: г.${this.address.city}, ул.${this.address.street}`);
+	}
+}
+userInfo.showInfo();
+
+let user = userInfo;
+userInfo = null;
+user.showInfo();
