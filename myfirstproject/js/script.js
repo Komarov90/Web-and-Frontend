@@ -1,325 +1,150 @@
-let arrOne = [
-	'Ваня',
-	'Иван',
-	'Оля',
-];
-console.log(arrOne[1]);
-console.log(arrOne[5]);
+const mainElement = document.documentElement;
+const mainElementWidth = mainElement.clientWidth;
+const mainElementHeight = mainElement.clientHeight;
 
+console.log(mainElementWidth);
+console.log(mainElementHeight);
 
-let arrTwo = [
-	"Коля",
-	{
-		type: "JS",
-		age: 36
-	},
-	true,
-	function () {
-		console.log('Привет, я Коля');
-	}
-];
 
-console.log(arrTwo);
-console.log(arrTwo[0]);
-console.log(arrTwo[1].type);
-console.log(arrTwo[2]);
-arrTwo[3]();
+const windowWidth = window.innerWidth;
+const windowHeight = window.innerHeight;
 
+console.log(windowWidth);
+console.log(windowHeight);
 
-let matrix = [
-	[1, 2, 3],
-	[4, 5, 6],
-	[7, 8, 9]
-];
-console.log(matrix);
-console.log(matrix[0][1]);
 
+let scrollWidth = Math.max(
+document.body.scrollWidth, document.documentElement.scrollWidth,
+document.body.offsetWidth, document.documentElement.offsetWidth,
+document.body.clientWidth, document.documentElement.clientWidth
+);
+let scrollHeight = Math.max(
+document.body.scrollHeight, document.documentElement.scrollHeight,
+document.body.offsetHeight, document.documentElement.offsetHeight,
+document.body.clientHeight, document.documentElement.clientHeight
+);
+console.log(scrollWidth);
+console.log(scrollHeight);
 
-let arrOne = ['Ваня', 'Иван', 'Оля',];
-console.log(arrOne);
-console.log(arrOne.length);
 
-arrOne.length = 0;
-console.log(arrOne);
+const windowScrollTop = window.pageYOffset;
+const windowScrollLeft = window.pageXOffset;
 
+console.log(windowScrollTop);
+console.log(windowScrollLeft);
 
-let arr = ['Ваня', 'Иван', 'Оля',];
-console.log(arr);
 
-let arrNew = arr;
-
-arrNew.length = 2;
-
-console.log(arr);
-
-
-let arr = ['Ваня', 'Иван', 'Оля',];
-
-
-arr[0] = 'Коля';
-console.log(arr);
-
-
-arr[3] = 'Ваня';
-console.log(arr);
-
-
-let arr = ['Ваня', 'Иштван', 'Оля',];
-arr.push('Вася');
-console.log(arr);
-
-arr.push('Дима', 'Катя');
-console.log(arr);
-
-
-let arr = ['Ваня', 'Иштван', 'Оля',];
-arr.shift();
-console.log(arr);
-
-
-let arr = ['Ваня', 'Иштван', 'Оля',];
-arr.pop();
-console.log(arr);
-
-
-let arr = ['Ваня', 'Иштван', 'Оля',];
-arr.unshift('Вася');
-console.log(arr);
-
-arr.unshift('Дима', 'Катя');
-console.log(arr);
-
-
-let arr = ['Ваня', 'Иштван', 'Оля',];
-
-delete arr[1];
-console.log(arr);
-console.log(arr[1]);
-console.log(arr.length);
-
-let arrOne = ['Ваня', 'Иштван', 'Оля',];
-arrOne.splice(1, 1);
-console.log(arrOne);
-
-let arrTwo = ['Ваня', 'Иштван', 'Оля',];
-let removed = arrTwo.splice(1, 1);
-console.log(removed);
-
-
-let arrThree = ['Ваня', 'Иштван', 'Оля',];
-arrThree.splice(0, 1, 'Коля');
-console.log(arrThree);
-
-
-let arrFour = ['Ваня', 'Иштван', 'Оля',];
-arrFour.splice(1, 0, 'Коля', 'Маша');
-console.log(arrFour);
-
-
-let arrFive = ['Ваня', 'Иштван', 'Оля',];
-arrFive.splice(-1, 1);
-console.log(arrFive);
-
-
-let arrTwo = arrOne.slice(1, 2);
-console.log(arrTwo);
-
-
-let arrThree = arrOne.slice(-2, -1);
-console.log(arrThree);
-
-
-let arrFour = arrOne.slice();
-console.log(arrFour);
-
-
-let arrOne = ['Ваня', 'Иштван', 'Оля',];
-let arrTwo = arrOne.concat('Петя');
-console.log(arrTwo);
-
-
-console.log(arr.indexOf('Иштван'));
-console.log(arr.indexOf('Вася'));
-console.log(arr.indexOf('Иштван', 2));
-
-
-console.log(arr.includes('Иштван'));
-console.log(arr.includes('Вася'));
-console.log(arr.includes('Иштван', 2));
-
-
-let result = arr.find(function(item, index, array) {
-});
-
-
-let arr = [
-	{ name: 'Вася', age: 36 },
-	{ name: 'Коля', age: 18 },
-	{ name: 'Оля', age: 'Не скажу' },
-]
-
-let resultOne = arr.find(function (item, index, array) {
-	return item.age === 18;
-});
-
-
-console.log(resultOne);
-
-
-let resultTwo = arr.findIndex(item => item.age === 18);
-console.log(resultTwo);
-
-
-let results = arr.filter(function (item, index, array) {
-
-});
-
-let arr = [
-	{ name: 'Вася', age: 36 },
-	{ name: 'Коля', age: 18 },
-	{ name: 'Оля', age: 'Не скажу' },
-]
-let result = arr.filter(function (item, index, array) {
-	return item.age >= 18;
-});
-console.log(result);
-
-
-let arrOne = ['Иштван', 'Ваня', 'Оля'];
-console.log(arrOne.sort());
-
-
-let arrTwo = [8, 22, 1,];
-console.log(arrTwo.sort());
-
-console.log("8" > "22");
-
-
-let arrTwo = [8, 22, 1,];
-console.log(arrTwo.sort());
-
-
-function compareNumeric(a, b) {
-	console.log(`Сравниваем ${a} и ${b}`);
-	if (a > b) return 1;
-	if (a == b) return 0;
-	if (a < b) return -1;
-
+function setScrollBy() {
+window.scrollBy(0, 50);
+const windowScrollTop = window.pageYOffset;
+console.log(windowScrollTop);
 }
 
 
-console.log(arrTwo.sort(compareNumeric));
+function setScrollTo() {
+	window.scrollTo(0, 50);
+	const windowScrollTop = window.pageYOffset;
+	console.log(windowScrollTop);
+}
 
-
-let arrOne = ['Ваня', 'Иштван', 'Оля'];
-console.log(arrOne.reverse());
-
-
-let result = arr.map(function(item, index, array) {
-});
-*/
-/*
-let arr = ['Ваня', 'Иштван', 'Оля',];
-
-let result = arr.map(function (item, index, array) {
-	return item[0];
-});
-
-console.log(arr);
-console.log(result);
-
-
-let str = 'Ваня,Иштван,Оля';
-
-let arr = str.split(',');
-console.log(arr);
-
-
-let arrTwo = str.split(',', 2);
-console.log(arrTwo);
-
-
-let arr = ['Ваня', 'Иштван', 'Оля',];
-let srt = arr.join('.');
-console.log(srt);
-
-
-let arrTwo = ['Ваня', 'Иштван', 'Оля'];
-console.log(String(arrTwo));
-
-
-let obj = {};
-let arr = [];
-
-console.log(typeof obj);
-console.log(typeof arr);
-
-
-if (Array.isArray(obj)) {
-	console.log('Это массив!');
-} else {
-	console.log('Это не массив!');
+function setScrollToOptions() {
+	window.scrollTo({
+		top: 500,
+		left: 0,
+		behavior: "smooth"
+	});
 }
 
 
-let arr = ['Ваня', 'Иштван', 'Оля',];
-console.log(arr.length);
+function setScrollIntoView(top) {
+	const lessonSelected = document.querySelector('.lesson__selected');
+	lessonSelected.scrollIntoView(top);
+}
 
-// Цикл FOR
-for (let i = 0; i < arr.length; i++) {
-	console.log(arr[i]);
+function setScrollIntoViewOptions(top) {
+	const lessonSelected = document.querySelector('.lesson__selected');
+	lessonSelected.scrollIntoView({
+		block: "center",
+		inline: "nearest",
+		behavior: "smooth"
+	});
 }
 
 
-let arr = ['Ваня', 'Иштван', 'Оля',];
-
-for (let arrItem of arr) {
-	console.log(arrItem);
+function setEnableDisableScroll() {
+	document.body.classList.toggle('scroll-lock');
 }
 
 
-arr.forEach(function (item, index, array) {
-});
+const elementOffsetWidth = block.offsetWidth;
+const elementOffsetHeight = block.offsetHeight;
+
+console.log(elementOffsetWidth);
+console.log(elementOffsetHeight);
 
 
-let arr = ['Ваня', 'Иштван', 'Оля',];
+const elementClientTop = block.clientTop;
+const elementClientLeft = block.clientLeft;
 
-arr.forEach(function (item, index, array) {
-	console.log(`${item} находится на ${index} позиции в ${array}`);
-});
+console.log(elementClientTop);
+console.log(elementClientLeft);
 
 
-arr.forEach((item, index, array) => {
-	console.log(`${item} находится на ${index} позиции в ${array}`);
-});
+const elementClientWidth = block.clientWidth;
+const elementClientHeight = block.clientHeight;
 
-let arr = ['Ваня', 'Иштван', 'Оля',];
+console.log(elementClientWidth);
+console.log(elementClientHeight);
 
-arr.forEach(show);
 
-function show(item) {
-	console.log(item);
+const elementScrollWidth = block.scrollWidth;
+const elementScrollHeight = block.scrollHeight;
+
+console.log(elementScrollWidth);
+console.log(elementScrollHeight);
+
+
+block.scrollTop = 150;
+
+const elementScrollLeft = block.scrollLeft;
+const elementScrollTop = block.scrollTop;
+
+console.log(elementScrollLeft);
+console.log(elementScrollTop);
+
+
+function setElementScrollBy() {
+	block.scrollBy({
+		top: 20,
+		left: 0,
+		behavior: "smooth"
+	})
 }
 
 
-let value = arr.reduce(function(previousValue, item, index, array) {
-}, [initial]);
+
+const item = document.querySelector('.lesson__item');
+
+const getItemCoords = item.getBoundingClientRect();
+
+console.log(getItemCoords);
+
+const getItemLeftCoord = item.getBoundingClientRect().left;
+
+console.log(getItemLeftCoord);
 
 
-let arrOne = [1, 2, 3, 4];
-let reduceValueOne = arrOne.reduce(function (previousValue, item, index, array) {
-	return item + previousValue;
-}, 0);
-console.log(reduceValueOne);
+const item = document.querySelector('.lesson__item');
 
-let arrArrow = [1, 2, 3, 4];
-let reduceValueArrow = arrArrow.reduce((pValue, item) => item + pValue, 0);
-console.log(reduceValueArrow);
+const getItemTopCoord = item.getBoundingClientRect().top;
+
+const getItemTopDocumentCoord = getItemTopCoord + window.pageYOffset;
+
+console.log(getItemTopCoord);
+console.log(getItemTopDocumentCoord);
 
 
-let reduceValueTwo = arrTwo.reduce(function (previousValue, item, index, array) {
-	console.log(previousValue);
-	console.log(item);
-	return `${item}, ${previousValue}`;
-});
-console.log(`Пользователи: ${reduceValueTwo}`);
+document.elementFromPoint(x, y);
+
+const elem = document.elementFromPoint(100, 100);
+console.log(elem);
