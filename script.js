@@ -1,158 +1,109 @@
-let someNum = 458;
+
+let someStringOne = 'Привет! Я строка!';
+let someStringTwo = "Привет! Я строка!";
+let someStringThree = `Привет! Я строка!`;
+
+console.log(someStringOne);
+console.log(someStringTwo);
+console.log(someStringThree);
+
+
+let textHi = "Привет!";
+let textAll = `${textHi} Я строка!`;
+
+console.log(textAll);
+
+
+function someSum(a, b) {
+	return a + b;
+}
+console.log(`Сумма: ${someSum(4, 7)}`);
+
+
+let text = `Привет!
+Вы на канале
+Фрилансер по жизни!
+`;
+console.log(text);
+
+
+let someString = "158";
+let someNum = 158;
+console.log(someString);
+console.log(typeof someString);
 console.log(someNum);
+console.log(typeof someNum);
 
-let someNums = 4.58;
-console.log(someNums);
-
-let someBigNum = 1000000;
-console.log(someBigNum);
-
-let someBigNum = 1e6;
-console.log(someBigNum);
+console.log(someString + someNum);
 
 
-let someLittleNum = 0.000001;
-console.log(someLittleNum);
-
-let someLittleNum = 1e-6;
-console.log(someLittleNum);
-
-console.log(0b11111111);
-console.log(0o377);
-
-let num = 255;
-console.log(num.toString(16));
-console.log(num.toString(8));
-console.log(num.toString(2));
+let textTwo = "Привет!\nВы на канале\nФрилансер по жизни!";
+console.log(textTwo);
 
 
-let numOne = Math.floor(5.8);
-let numTwo = Math.floor(2.2);
-let numThree = Math.floor(-2.2);
-
-console.log(numOne);
-console.log(numTwo);
-console.log(numThree);
+let text = "Привет!\n\tВы на канале\n\t\tФрилансер по жизни!";
+console.log(text);
 
 
-Math.ceil - Округление в большую сторону
-
-let numOne = Math.ceil(5.8);
-let numTwo = Math.ceil(2.2);
-let numThree = Math.ceil(-2.2);
-
-console.log(numOne);
-console.log(numTwo);
-console.log(numThree);
+let text = "Привет! Вы на канале Фрилансер по жизни \\ IT и фриланс";
+console.log(text);
 
 
-let numOne = Math.round(5.8);
-let numTwo = Math.round(2.2);
-let numThree = Math.round(-2.2);
-
-console.log(numOne);
-console.log(numTwo);
-console.log(numThree);
+let text = "Привет! Вы на канале \"Фрилансер по жизни!\"";
+console.log(text);
 
 
-let numOne = Math.round(5.845);
-console.log(numOne); // 6
+let text = "Живи, а работай в свободное время! \u00A9 \u{1F60D}";
+console.log(text);
 
 
-let numOne = Math.round(5.845 * 10) / 10;
-console.log(numOne);
+let textOne = "Привет!";
+console.log(textOne.length);
 
 
-let numTwo = Math.round(5.845 * 100) / 100;
-console.log(numTwo);
+let text = "Привет!";
+let firstSymbol = text[0];
+let lasttSymbol = text[text.length - 1];
+console.log(firstSymbol);
+console.log(lasttSymbol);
 
 
-let numThree = Math.round(5.8449 * 100) / 100;
-console.log(numThree);
-
-
-let numOne = 5.845;
-console.log(numOne.toFixed(1));
-
-
-console.log(+numOne.toFixed(1));
-console.log(Number(numOne.toFixed(1)));
-
-
-let numOne = Math.round(1.005 * 100) / 100;
-console.log(numOne);
-
-let numTwo = 12.35;
-console.log(numTwo.toFixed(1));
-
-
-let problem = 0.1 + 0.2 === 0.3;
-console.log(problem);
-console.log(0.1 + 0.2);
-
-
-let sourceNum = 1.005 + Number.EPSILON;
-let numFour = Math.round(sourceNum * 100) / 100;
-console.log(numFour);
-
-console.log(sourceNum * 100);
-console.log(Math.round(sourceNum * 100));
-
-
-console.log(Number(25 + "Привет!"));
-console.log(isNaN(25 + "Привет!"));
-
-if (25 + "Привет!" !== NaN) {
-	console.log('Я не NaN');
+for (const char of text) {
+	console.log(char);
 }
 
-console.log(NaN === NaN);
+
+let text = "Привет!";
+text[6] = ".";
+console.log(text);
+
+let text = "Привет!";
+console.log(text.toUpperCase());
+console.log(text.toLowerCase());
 
 
-console.log(isFinite("25")); // "25" -> 25 -> true
-console.log(isFinite("Привет!")); // NaN -> false
-console.log(isFinite(10 / 0)); // Infinity -> false
+let text = "Привет!";
+console.log(text.indexOf('рив'));
+console.log(text.indexOf('рив', 3));
 
 
-let valueOne = +"150";
-console.log(valueOne);
-console.log(typeof valueOne);
+let text = "Привет!";
+console.log(text.includes('рив'));
+console.log(text.includes('рив', 3));
+
+console.log(text.startsWith('рив'));
+console.log(text.endsWith('!'));
 
 
-let valueTwo = +"150px";
-console.log(valueTwo);
-console.log(typeof valueTwo);
+let text = "Привет!";
+let searchText = "пР";
+
+console.log(text.toLowerCase().includes(searchText.toLowerCase()));
 
 
-let valueOne = parseInt("150.58px");
-console.log(valueOne);
-console.log(typeof valueOne);
+let text = "Привет!";
+console.log(text.slice(1, 2));
+console.log(text.slice(-2, -1));
+console.log(text.slice(1));
 
 
-let valueTwo = parseFloat("150.58px");
-console.log(valueTwo);
-console.log(typeof valueTwo);
-
-
-let valueTwo = parseFloat("a150.58px");
-console.log(valueTwo);
-console.log(typeof valueTwo);
-
-
-console.log(parseInt('0xff', 16));
-console.log(parseInt('ff', 16));
-
-
-console.log(Math.random());
-console.log(Math.random());
-console.log(Math.random());
-
-
-console.log(Math.max(5, 85, -49));
-console.log(Math.min(5, 85, -49));
-
-
-let num = -58;
-console.log(Math.abs(num));
-
-console.log(Math.pow(5, 8));
