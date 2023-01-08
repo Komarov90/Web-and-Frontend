@@ -4,96 +4,65 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.css">
-		<title>JavaScript. Размеры, прокрутка, Координаты</title>
+		<title>JavaScript события</title>
 	</head>
 	<body>
 		<div class="wrapper">
 			<h1>
-				<span class="yellow">JavaScript.</span>
-				Размеры, прокрутка, Координаты
+				<span class="yellow">JavaScript</span> события
 			</h1>
-			<h3>Урок №14</h3>
+			<h3>Урок №15</h3>
 			<div class="lesson">
-				<h1 class="lesson__title">Я заголовок</h1>
-				<div class="lesson__text">
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro cum at mollitia odio. Esse molestiae eaque nihil fugit ea deserunt. Magnam, iste ea eos autem reprehenderit architecto impedit vitae?
-					</p>
-					<p class="lesson__item">Я объект</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro cum at mollitia odio. Esse molestiae eaque nihil fugit ea deserunt. Magnam, iste ea eos autem reprehenderit architecto impedit vitae?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro cum at mollitia odio. Esse molestiae eaque nihil fugit ea deserunt. Magnam, iste ea eos autem reprehenderit architecto impedit vitae?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro cum at mollitia odio. Esse molestiae eaque nihil fugit ea deserunt. Magnam, iste ea eos autem reprehenderit architecto impedit vitae?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro cum at mollitia odio. Esse molestiae eaque nihil fugit ea deserunt. Magnam, iste ea eos autem reprehenderit architecto impedit vitae?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro cum at mollitia odio. Esse molestiae eaque nihil fugit ea deserunt. Magnam, iste ea eos autem reprehenderit architecto impedit vitae?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro cum at mollitia odio. Esse molestiae eaque nihil fugit ea deserunt. Magnam, iste ea eos autem reprehenderit architecto impedit vitae?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro cum at mollitia odio. Esse molestiae eaque nihil fugit ea deserunt. Magnam, iste ea eos autem reprehenderit architecto impedit vitae?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro cum at mollitia odio. Esse molestiae eaque nihil fugit ea deserunt. Magnam, iste ea eos autem reprehenderit architecto impedit vitae?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro cum at mollitia odio. Esse molestiae eaque nihil fugit ea deserunt. Magnam, iste ea eos autem reprehenderit architecto impedit vitae?
-					</p>
+				<div class="block">
+					Блок
+					<div class="block__inner">
+						Блок второго уровня
+						<div class="block__inner-inner">
+							Блок третьего уровня
+						</div>
+					</div>
 				</div>
-				<div class="lesson__block">
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta vel blanditiis consectetur pariatur modi, animi id saepe excepturi fugit ut culpa alias officiis minus, in consequatur. Veritatis porro accusamus consequatur!
-					</p>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta vel blanditiis consectetur pariatur modi, animi id saepe excepturi fugit ut culpa alias officiis minus, in consequatur. Veritatis porro accusamus consequatur!
-					</p>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta vel blanditiis consectetur pariatur modi, animi id saepe excepturi fugit ut culpa alias officiis minus, in consequatur. Veritatis porro accusamus consequatur!
-					</p>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta vel blanditiis consectetur pariatur modi, animi id saepe excepturi fugit ut culpa alias officiis minus, in consequatur. Veritatis porro accusamus consequatur!
-					</p>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta vel blanditiis consectetur pariatur modi, animi id saepe excepturi fugit ut culpa alias officiis minus, in consequatur. Veritatis porro accusamus consequatur!
-					</p>
+				<button type="button" class="button"><span>Нажми на меня!</span></button>
+				<button type="button" class="button">И на меня!</button>
+				<button type="button" class="button">И на меня!</button>
+				<button type="button" class="button">И на меня!</button>
+				<nav class="menu">
+					<button type="button" class="menu__button">
+						<span>Открыть меню</span>
+						<span>Закрыть меню</span>
+					</button>
+					<ul hidden class="menu__list">
+						<li><a href="" class="menu__link">Пункт №1</a></li>
+						<li><a href="" class="menu__link">Пункт №2</a></li>
+						<li><a href="" class="menu__link">Пункт №3</a></li>
+						<li><a href="" class="menu__link">Пункт №4</a></li>
+					</ul>
+				</nav>
+				<a href="https://google.com" class="link">Google</a>
+
+				<div class="block-for-mouse">
+					<span>Я дочерний SPAN</span>
 				</div>
-				<div class="lesson__text">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione!</p>
-					<button class="button" onclick="setScrollBy()">Прокрутить на 50px (scrollBy)</button>
-					<button class="button" onclick="setScrollTo()">Прокрутить на 50px (scrollTo)</button>
-					<button class="button" onclick="setScrollToOptions()">Прокрутить на 500px (scrollTo + опции)</button>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque, blanditiis est praesentium, dolorum id et ad at similique magnam, laborum voluptatibus repellat magni voluptatum quo voluptates itaque aliquam. Ad.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque, blanditiis est praesentium, dolorum id et ad at similique magnam, laborum voluptatibus repellat magni voluptatum quo voluptates itaque aliquam. Ad.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque, blanditiis est praesentium, dolorum id et ad at similique magnam, laborum voluptatibus repellat magni voluptatum quo voluptates itaque aliquam. Ad.</p>
-					<button class="button" onclick="setScrollIntoView()">Прокрутить scrollIntoView()</button>
-					<button class="button" onclick="setScrollIntoView(false)">Прокрутить scrollIntoView(false)</button>
-					<button class="button" onclick="setScrollIntoViewOptions()">Прокрутить scrollIntoView(опции)</button>
-					<p class="lesson__selected">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque, blanditiis est praesentium, dolorum id et ad at similique magnam, laborum voluptatibus repellat magni voluptatum quo voluptates itaque aliquam. Ad.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque, blanditiis est praesentium, dolorum id et ad at similique magnam, laborum voluptatibus repellat magni voluptatum quo voluptates itaque aliquam. Ad.</p>
-					<button class="button" onclick="setEnableDisableScroll()">Запретить/Разрешить прокрутку</button>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque, blanditiis est praesentium, dolorum id et ad at similique magnam, laborum voluptatibus repellat magni voluptatum quo voluptates itaque aliquam. Ad.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque, blanditiis est praesentium, dolorum id et ad at similique magnam, laborum voluptatibus repellat magni voluptatum quo voluptates itaque aliquam. Ad.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque, blanditiis est praesentium, dolorum id et ad at similique magnam, laborum voluptatibus repellat magni voluptatum quo voluptates itaque aliquam. Ad.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque, blanditiis est praesentium, dolorum id et ad at similique magnam, laborum voluptatibus repellat magni voluptatum quo voluptates itaque aliquam. Ad.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet nobis vel eaque doloribus perspiciatis ex est dicta atque nulla, nisi quam ab laboriosam placeat sit, eveniet delectus distinctio ratione!</p>
+
+				<div class="block-for-mouse">
+					<span>1</span>
+					<span>2</span>
+					<span>3</span>
+					<span>4</span>
+					<span>5</span>
+					<span>6</span>
+					<span>7</span>
+					<span>8</span>
+					<span>9</span>
 				</div>
-				-->
+				<div class="drag-field">
+					<div class="drag-field__item"></div>
+					<div class="drag-field__point"></div>
+				</div>
+				<div class="textarea">
+					<textarea autocomplete="off" maxlength="30" name="form[]" class="textarea__item"></textarea>
+					<div class="textarea__counter">Осталось <span></span> символов</div>
+				</div>
 			</div>
 		</div>
 		<script src="js/script.js"></script>
