@@ -1,362 +1,231 @@
-
-button.onclick = function () {
-	console.log('Клик!');
-}
-
-function showConsole() {
-	console.log('Клик!');
-}
-button.onclick = showConsole;
+const mainForm = document.forms[0];
+console.log(mainForm);
 
 
-const button = document.querySelector('.button');
-
-button.onclick = function () {
-	console.log('Клик!');
-}
-button.onclick = function () {
-	console.log('Клак!');
-}
+const mainForm = document.forms.main;
+console.log(mainForm);
 
 
-const button = document.querySelector('.button');
+console.log(document.querySelectorAll('form'));
+console.log(document.forms);
 
-button.addEventListener("click", function (e) {
-	console.log('Клик!');
+
+document.body.insertAdjacentHTML(
+	"beforeend",
+	`<form name="some" class="some-form" action="#"></form>`
+);
+
+
+const mainFormInput = mainForm.elements.nameInput;
+console.log(mainFormInput);
+
+
+const mainFormRadioButtons = mainForm.nameRadio;
+console.log(mainFormRadioButtons);
+
+
+const mainFormInput = mainForm.nameInput;
+const mainFormTextarea = mainForm.nameTextarea;
+
+
+console.log(mainFormInput.value);
+console.log(mainFormTextarea.value);
+
+
+mainFormInput.value = "Пока";
+mainFormTextarea.value = "До встречи!";
+
+
+const mainFormRadioButtons = mainForm.nameRadio;
+const mainFormCheckBox = mainForm.nameCheck;
+const mainFormFile = mainForm.nameFile;
+
+
+console.log(mainFormRadioButtons[0].value);
+console.log(mainFormRadioButtons[1].value);
+console.log(mainFormRadioButtons[0].checked);
+console.log(mainFormRadioButtons[1].checked);
+
+
+console.log(mainFormCheckBox.value);
+console.log(mainFormCheckBox.checked);
+
+
+mainFormRadioButtons[0].value = "left";
+mainFormRadioButtons[1].value = "right";
+mainFormRadioButtons[1].checked = true;
+
+
+mainFormCheckBox.value = "save";
+mainFormCheckBox.checked = true;
+
+
+const mainForm = document.forms.main;
+const mainFormSelect = mainForm.nameSelect;
+
+console.log(mainFormSelect.options);
+
+
+const mainFormSelectIndex = mainFormSelect.selectedIndex;
+console.log(mainFormSelectIndex);
+
+const mainFormSelectValue = mainFormSelect.value;
+console.log(mainFormSelectValue);
+
+const mainFormSelectText = mainFormSelect.options[mainFormSelectIndex].text;
+console.log(mainFormSelectText);
+
+
+let newOption = new Option("100", "4", true, true);
+mainFormSelect.append(newOption);
+
+
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+
+const mainFormInputPlaceholder = mainFormInput.placeholder;
+
+mainFormInput.addEventListener("focus", function (e) {
+	mainFormInput.placeholder = "";
 });
-button.addEventListener("click", function (e) {
-	console.log('Клак!');
-});
-
-
-const button = document.querySelector('.button');
-
-function showConsole() {
-	console.log('Клик!');
-	button.removeEventListener("click", showConsole);
-}
-
-button.addEventListener("click", showConsole);
-
-
-const button = document.querySelector('.button');
-
-function showConsole() {
-	console.log('Клик!');
-}
-
-button.addEventListener("click", showConsole, options);
-
-
-const button = document.querySelector('.button');
-
-function showConsole(event) {
-
-}
-
-button.addEventListener("click", showConsole);
-
-
-block.addEventListener("click", function (event) {
-	console.log('Клик на Блок!');
-});
-blockInner.addEventListener("click", function (event) {
-	console.log('Клик на Блок второго уровня!');
-}, { "capture": false });
-blockInnerInner.addEventListener("click", function (event) {
-	console.log('Клик на Блок третьего уровня!');
-});
-
-
-const button = document.querySelectorAll('.button');
-
-function showConsole() {
-	console.log('Ура!');
-}
-button.forEach(buttonItem => {
-	buttonItem.addEventListener("click", showConsole);
-});
-
-
-const lesson = document.querySelector('.lesson');
-
-function showConsole() {
-	console.log('Ура!');
-}
-lesson.addEventListener("click", function (event) {
-	if (event.target.closest('.button')) {
-		showConsole();
-	}
-});
-
-
-const menuBody = document.querySelector('.menu');
-
-document.addEventListener("click", menu);
-
-function menu(event) {
-	if (event.target.closest('.menu__button')) {
-		menuBody.classList.toggle('_active');
-	}
-	if (!event.target.closest('.menu')) {
-		menuBody.classList.remove('_active');
-	}
-}
-
-
-link.addEventListener("click", function (event) {
-	console.log('Наши действия');
-	event.preventDefault();
-});
-*/
-/*
-link.onclick = function () {
-	console.log('Наши действия');
-	return false;
-}
-
-const link = document.querySelector('.link');
-
-link.addEventListener("click", function (event) {
-	console.log('Наши действия');
-	// отменить действие браузера (переход по ссылке)
-	event.preventDefault();
-}, { "passive": true });
-
-
-
-const button = document.querySelector('.button');
-
-button.addEventListener("mousedown", function (event) {
-	console.log(`Нажата кнопка ${event.which}`);
-});
-
-button.addEventListener("click", function (event) {
-	console.log('Нажата основная кнопка мыши');
-});
-
-button.addEventListener("contextmenu", function (event) {
-	console.log('Вызвано контекстное меню (не основная кнопка мыши)');
-});
-
-event.which = 1 - Нажата основная кнопка мыши (обычно левая)
-event.which = 2 - Нажата средняя кнопка мыши (колесо)
-event.which = 3 - Нажата не основная кнопка мыши (обычно правая)
-
-
-const blockForMouse = document.querySelector('.block-for-mouse');
-
-blockForMouse.addEventListener("mousemove", function (event) {
-	blockForMouse.innerHTML =
-		`clientX - ${event.clientX} <br> clientY - ${event.clientY}`;
+mainFormInput.addEventListener("blur", function (e) {
+	mainFormInput.placeholder = mainFormInputPlaceholder;
 });
 
 
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
 
-const blockForMouse = document.querySelector('.block-for-mouse');
+mainFormInput.focus();
 
-blockForMouse.addEventListener("mouseover", function (event) {
-	console.log(event.target);
-	console.log(event.relatedTarget);
+setTimeout(() => {
+	mainFormInput.blur();
+}, 3000);
+
+
+lesson.addEventListener("focus", function (e) {
+	lesson.classList.add('_focus');
+	console.log('Див lesson в фокусе!');
 });
-blockForMouse.addEventListener("mouseout", function (event) {
-	console.log(event.target);
-	console.log(event.relatedTarget);
-});
-*/
 
-/*
-const blockForMouse = document.querySelector('.block-for-mouse');
-
-blockForMouse.addEventListener("mouseover", function (event) {
-	console.log(`Курсор над элементом`);
-});
-blockForMouse.addEventListener("mouseout", function (event) {
-	console.log(`Курсор уходит с элемента`);
+lesson.addEventListener("blur", function (e) {
+	lesson.classList.remove('_focus');
 });
 
 
-const blockForMouse = document.querySelector('.block-for-mouse');
+const mainForm = document.forms.main;
 
-blockForMouse.addEventListener("mouseenter", function (event) {
-	console.log(`Курсор над элементом`);
-});
-blockForMouse.addEventListener("mouseleave", function (event) {
-	console.log(`Курсор уходит с элемента`);
+mainForm.addEventListener("focusin", function (e) {
+	mainForm.classList.add('_active');
 });
 
 
-const blockForMouse = document.querySelector('.block-for-mouse');
-blockForMouse.addEventListener("mouseover", function (event) {
-	let target = event.target.closest('span');
-	if (!target) return;
-	target.style.cssText = `background-color: #77608d;`;
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+const mainFormSelect = mainForm.nameSelect;
+const mainFormFile = mainForm.nameFile;
+
+mainFormInput.addEventListener("change", function (e) {
+	console.log('Сработало change в input');
 });
-blockForMouse.addEventListener("mouseout", function (event) {
-	let target = event.target.closest('span');
-	if (!target) return;
-	target.style.cssText = ``;
+mainFormSelect.addEventListener("change", function (e) {
+	console.log('Сработало change в select');
+});
+mainFormFile.addEventListener("change", function (e) {
+	console.log('Сработало change в file');
 });
 
 
-const gragField = document.querySelector('.drag-field');
-const gragItem = document.querySelector('.drag-field__item');
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
 
-gragItem.addEventListener("mousedown", function (event) {
-
-	let coordsItemX = event.clientX - gragItem.getBoundingClientRect().left;
-	let coordsItemY = event.clientY - gragItem.getBoundingClientRect().top;
-
-	let gragItemSizes = {
-		width: gragItem.offsetWidth,
-		height: gragItem.offsetHeight
-	}
-	let gragFieldSizes = {
-		left: gragField.getBoundingClientRect().left + scrollX,
-		top: gragField.getBoundingClientRect().top + scrollY,
-		right: gragField.getBoundingClientRect().left + scrollX + gragField.offsetWidth,
-		bottom: gragField.getBoundingClientRect().top + scrollY + gragField.offsetHeight
-	}
-
-	gragItem.style.position = 'absolute';
-	gragItem.style.zIndex = 1000;
-	document.body.append(gragItem);
-
-	moveItem(event.pageX, event.pageY);
-
-	function moveItem(pageX, pageY) {
-		let currentX = pageX - coordsItemX;
-		let currentY = pageY - coordsItemY;
-
-		if (
-			currentX + gragItemSizes.width <= gragFieldSizes.right &&
-			currentX >= gragFieldSizes.left
-		) {
-			gragItem.style.left = `${currentX}px`;
-		} else {
-			if (currentX + gragItemSizes.width > gragFieldSizes.right) {
-				gragItem.style.left = `${gragFieldSizes.right - gragItemSizes.width}px`;
-			}
-			if (currentX < gragFieldSizes.left) {
-				gragItem.style.left = `${gragFieldSizes.left}px`;
-			}
-		}
-		if (
-			currentY + gragItemSizes.height <= gragFieldSizes.bottom &&
-			currentY >= gragFieldSizes.top
-		) {
-			gragItem.style.top = `${currentY}px`;
-		} else {
-			if (currentY + gragItemSizes.height > gragFieldSizes.bottom) {
-				gragItem.style.top = `${gragFieldSizes.bottom - gragItemSizes.height}px`;
-			}
-			if (currentY < gragFieldSizes.top) {
-				gragItem.style.top = `${gragFieldSizes.top}px`;
-			}
-		}
-	}
-
-	let currentDroppable = null;
-
-	function onDragItem(event) {
-		moveItem(event.pageX, event.pageY);
-
-		gragItem.hidden = true;
-		let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
-		gragItem.hidden = false;
-
-		if (!elemBelow) return;
-		let droppableBelow = elemBelow.closest('.drag-field__point');
-
-		if (currentDroppable !== droppableBelow) {
-			if (currentDroppable) {
-				currentDroppable.classList.remove('_active');
-				gragItem.classList.remove('_active');
-			}
-			currentDroppable = droppableBelow;
-			if (currentDroppable) {
-				currentDroppable.classList.add('_active');
-				gragItem.classList.add('_active');
-			}
-		}
-	}
-	document.addEventListener('mousemove', onDragItem);
-
-	document.addEventListener("mouseup", function (event) {
-		document.removeEventListener('mousemove', onDragItem);
-	}, { "once": true });
+mainFormInput.addEventListener("input", function (event) {
+	console.log(`value: ${mainFormInput.value}`);
 });
-gragItem.addEventListener("dragstart", function (event) {
+
+
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+
+mainFormInput.addEventListener("copy", function (event) {
+	console.log(`Копируем`);
+});
+mainFormInput.addEventListener("paste", function (event) {
+	console.log(`Вставляем`);
+});
+mainFormInput.addEventListener("cut", function (event) {
+	console.log(`Вырезаем`);
+});
+
+
+mainFormInput.addEventListener("paste", function (event) {
+	console.log(`Нельзя вставить`);
 	event.preventDefault();
 });
 
 
-document.addEventListener("keydown", function (event) {
-	console.log(`Нажата клавиша ${event.code} (${event.key})`);
-});
-document.addEventListener("keyup", function (event) {
-	console.log(`Отжата клавиша ${event.code} (${event.key})`);
-});
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
 
+mainForm.addEventListener("submit", function (event) {
+	console.log('Форма отправляется...');
 
-document.addEventListener('keydown', function (event) {
-	if (event.code == 'KeyZ' && (event.ctrlKey || event.metaKey)) {
-		console.log('Отмена действия!');
+	// Проверяем поля и если есть ошибки отменяем отправку
+	if (!mainFormInput.value) {
+		console.log('Поле nameInput не заполнено');
+		event.preventDefault();
 	}
 });
 
 
-document.addEventListener("keydown", function (event) {
-	console.log(`Нажата клавиша ${event.code} (${event.key})`);
-	console.log(event.repeat);
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+
+
+mainFormInput.addEventListener("blur", function (e) {
+	mainForm.submit();
 });
 
 
-const txtItem = document.querySelector('.textarea__item');
-const txtItemLimit = txtItem.getAttribute('maxlength');
-const txtCounter = document.querySelector('.textarea__counter span');
-txtCounter.innerHTML = txtItemLimit;
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
 
-txtItem.addEventListener("keyup", txtSetCounter);
-txtItem.addEventListener("keydown", function (event) {
-	if (event.repeat) txtSetCounter();
+mainForm.addEventListener("submit", function (event) {
+	if (emailTest(mainFormInput)) {
+		mainFormInput.parentElement.insertAdjacentHTML(
+			"beforeend",
+			`<div class="main-form__error">
+				Введите email
+			</div>`
+		);
+		event.preventDefault();
+	}
 });
 
-function txtSetCounter() {
-	const txtCounterResult = txtItemLimit - txtItem.value.length;
-	txtCounter.innerHTML = txtCounterResult;
-}
-
-
-document.addEventListener('keyup', function (event) {
-	if (event.code === 'Escape') {
-		menuBody.classList.remove('_active');
+mainFormInput.addEventListener("focus", function (event) {
+	if (mainFormInput.nextElementSibling) {
+		mainFormInput.nextElementSibling.remove();
 	}
 });
 
 
-window.addEventListener('scroll', function (event) {
-	console.log(`${scrollY}px`);
+function emailTest(input) {
+	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
+
+
+const mainForm = document.forms.main;
+const mainFormFile = mainForm.nameFile;
+
+mainFormFile.addEventListener("change", function (e) {
+	let selectedFile = mainFormFile.files[0];
+
+	let fileUrl = URL.createObjectURL(selectedFile);
+
+	mainFormFile.parentElement.insertAdjacentHTML(
+		"beforeend",
+		`<div class="main-form__image">
+			<img alt="" title="${selectedFile.name}" src="${fileUrl}">
+		</div>`
+	);
 });
-
-
-function readyDom() {
-	const image = document.querySelector('.image');
-	console.log(document.readyState);
-	console.log('DOM загружен!');
-	console.log(image.offsetWidth);
-}
-function readyLoad() {
-	console.log(document.readyState);
-	const image = document.querySelector('.image');
-	console.log('Страница загружена!');
-	console.log(image.offsetWidth);
-}
-
-
-window.addEventListener("beforeunload", beforeUnLoad);
-
-function beforeUnLoad(event) {
-	event.preventDefault();
-	event.returnValue = '';
-}

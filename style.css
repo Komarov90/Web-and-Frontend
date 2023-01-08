@@ -52,6 +52,9 @@ a:hover {
 .lesson {
 	padding: 20px 0px 0px 0px;
 }
+.lesson._focus {
+	outline: 2px dotted rgb(231, 231, 0);
+}
 
 button {
 	height: 40px;
@@ -70,135 +73,59 @@ button:hover {
 	background-color: rgb(248, 248, 89);
 }
 
-button._active {
-	background-color: #7a956b;
-}
-
-.link {
-	font-size: 20px;
-	color: rgb(231, 231, 0);
-}
-
-.block {
-	padding: 15px;
-	width: 350px;
-	background-color: #794f45;
-}
-.block__inner {
-	padding: 15px;
-	margin: 15px;
-	background-color: #77608d;
-}
-.block__inner-inner {
-	margin: 15px;
-	background-color: #7a956b;
-	padding: 15px;
-}
-
-.menu {
-	display: inline-block;
-}
-
-.menu._active .menu__list {
-	display: block;
-}
-
-.menu._active .menu__button span:first-child {
-	display: none;
-}
-.menu._active .menu__button span:last-child {
-	display: block;
-}
-
-.menu__button span:first-child {
-	display: block;
-}
-.menu__button span:last-child {
-	display: none;
-}
-
-.menu__list {
-	background-color: #77608d;
-	padding: 15px;
-}
-.menu__list li:not(:last-child) {
-	margin: 0px 0px 15px 0px;
-}
-.menu__link {
-	color: #fff;
-	font-size: 16px;
-}
-.menu__link:hover {
-	text-decoration: none;
-}
-
-.block-for-mouse {
-	padding: 15px;
-	font-size: 14px;
-	width: 200px;
-	height: 200px;
-	background-color: #7a956b;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	text-align: center;
-}
-
-.block-for-mouse span {
+.main-form {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-wrap: wrap;
 }
-
-.drag-field {
-	width: 200px;
-	height: 200px;
-	background-color: #7a956b;
-	position: relative;
+.main-form._active {
+	outline: 1px solid red;
 }
-.drag-field__item {
-	width: 40px;
-	height: 40px;
-	cursor: grab;
-	background-color: #77608d;
+.main-form__column {
+	flex: 0 1 50%;
 }
-.drag-field__item._active {
+.main-form__column:last-child {
+	flex: 1 1 auto;
 }
-.drag-field__point {
-	width: 60px;
-	height: 60px;
-	position: absolute;
-	left: 50%;
-	top: 10%;
-	background-color: #45553d;
-	transition: all 0.3s ease 0s;
+.main-form__item {
+	margin: 0px 0px 25px 0px;
 }
-.drag-field__point._active {
-	box-shadow: inset 0px 0px 10px 5px #333f2d;
+.main-form__label {
+	display: block;
+	margin: 0px 0px 10px 0px;
 }
-
-.textarea {
-}
-.textarea__item {
-	width: 300px;
-	height: 150px;
-	padding: 10px;
-	font-size: 18px;
+.main-form__input,
+.main-form__select,
+.main-form__textarea {
+	font-family: inherit;
+	min-height: 40px;
+	font-size: 16px;
+	line-height: 40px;
+	width: 250px;
+	padding: 0px 15px;
 	color: #fff;
-	background-color: rgb(44, 43, 43);
+	background-color: rgb(48, 48, 48);
+	border: 1px solid #111;
+	border-radius: 3px;
 }
-.textarea__counter {
-}
-
-.scroll {
-	position: fixed;
-	top: 0;
-	right: 0;
-	background-color: #7a956b;
-	padding: 15px;
-	font-size: 20px;
-	color: #fff;
+.main-form__textarea {
+	padding: 10px 15px;
+	min-height: 100px;
 }
 
-.image {
+.main-form__radio {
+	margin: 0px 0px 5px 0px;
+}
+
+.main-form__button {
+}
+.main-form__image {
+	margin: 10px 0px 0px 0px;
+}
+.main-form__image img {
+	width: 150px;
+}
+
+.main-form__error {
+	padding: 10px 0px 0px 0px;
+	color: red;
 }
